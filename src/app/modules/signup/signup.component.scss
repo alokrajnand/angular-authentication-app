@@ -1,0 +1,25 @@
+.auth-backgroud {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../assets/bg.jpg);
+}
+
+.auth-container {
+  margin: 0 auto;
+  padding: 0;
+  width: 40%;
+}
+
+.auth-center-container {
+  padding-top: 30%;
+}
+.auth-card {
+  border-radius: 0em;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.mat-toolbar {
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}

@@ -10,15 +10,16 @@
         <ul fxLayout="row" fxLayoutGap="20px">
                 <button mat-icon-button ><mat-icon>settings</mat-icon></button>
                 <button mat-icon-button><mat-icon>help_outline</mat-icon></button>
-                <button mat-raised-button color="primary">Sign Up</button>
-                <button mat-raised-button color="primary">Login</button> 
+                <button mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>
+                <button mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Login</button> 
+                <img src="../../assets/1.jpg" class="avatar">
                 <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
                     <mat-menu #menu="matMenu">
                         <button mat-menu-item>Item 1</button>
                         <button mat-menu-item>Item 2</button>
                     </mat-menu> 
-        </ul>
 
+        </ul>
     </div>
 
   </mat-toolbar-row>

@@ -5,11 +5,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { DefaultModule } from "./layouts/default/default.module";
-import { SignupComponent } from './layouts/signup/signup.component';
-import { SigninComponent } from './layouts/signin/signin.component';
+
 
 @NgModule({
-  declarations: [AppComponent, SignupComponent, SigninComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
