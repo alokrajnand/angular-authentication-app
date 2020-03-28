@@ -1,10 +1,13 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { DashboardComponent } from "./modules/dashboard/dashboard.component";
+import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { DefaultComponent } from "./layouts/default/default.component";
-import { PostsComponent } from "./modules/posts/posts.component";
-import { SignupComponent } from "./modules/signup/signup.component";
-import { SigninComponent } from "./modules/signin/signin.component";
+import { PostsComponent } from "./pages/posts/posts.component";
+import { SignupComponent } from "./pages/signup/signup.component";
+import { SigninComponent } from "./pages/signin/signin.component";
+import { ForgetpasswordComponent } from "./pages/forgetpassword/forgetpassword.component";
+import { ResetpasswordComponent } from "./pages/resetpassword/resetpassword.component";
+import { RestpasswordauthComponent } from "./pages/restpasswordauth/restpasswordauth.component";
 
 const routes: Routes = [
   {
@@ -16,7 +19,10 @@ const routes: Routes = [
     ]
   },
   { path: "signup", component: SignupComponent },
-  { path: "signin", component: SigninComponent }
+  { path: "signin", component: SigninComponent },
+  { path: "forgetpassword", component: ForgetpasswordComponent },
+  { path: "resetpassword", component: ResetpasswordComponent },
+  { path: "authresetpassword", component: RestpasswordauthComponent }
 ];
 
 @NgModule({

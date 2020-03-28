@@ -1,18 +1,26 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DefaultComponent } from "./default.component";
-import { DashboardComponent } from "../../modules/dashboard/dashboard.component";
+import { DashboardComponent } from "../../pages/dashboard/dashboard.component";
 import { RouterModule } from "@angular/router";
-import { PostsComponent } from "src/app/modules/posts/posts.component";
+import { PostsComponent } from "src/app/pages/posts/posts.component";
 import { SharedModule } from "src/app/shared/shared.module";
 import { MatSidenavModule } from "@angular/material/sidenav";
-import { SignupComponent } from "../../modules/signup/signup.component";
-import { SigninComponent } from "../../modules/signin/signin.component";
+import { SignupComponent } from "../../pages/signup/signup.component";
+import { SigninComponent } from "../../pages/signin/signin.component";
+import { ForgetpasswordComponent } from "../../pages/forgetpassword/forgetpassword.component";
+import { ResetpasswordComponent } from "../../pages/resetpassword/resetpassword.component";
+import { RestpasswordauthComponent } from "../../pages/restpasswordauth/restpasswordauth.component";
 
-import { MatFormFieldModule, MatLabel } from "@angular/material/form-field";
+import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatCardModule } from "@angular/material/card";
+
+import { MatButtonModule } from "@angular/material/button";
+import { MatDividerModule } from "@angular/material/divider";
+
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +28,10 @@ import { MatCardModule } from "@angular/material/card";
     DashboardComponent,
     PostsComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    ForgetpasswordComponent,
+    ResetpasswordComponent,
+    RestpasswordauthComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +41,11 @@ import { MatCardModule } from "@angular/material/card";
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatDividerModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class DefaultModule {}
