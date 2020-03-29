@@ -11,6 +11,7 @@ import { SigninComponent } from "../../pages/signin/signin.component";
 import { ForgetpasswordComponent } from "../../pages/forgetpassword/forgetpassword.component";
 import { ResetpasswordComponent } from "../../pages/resetpassword/resetpassword.component";
 import { RestpasswordauthComponent } from "../../pages/restpasswordauth/restpasswordauth.component";
+import { HttpClientModule } from "@angular/common/http";
 
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
@@ -45,7 +46,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     MatButtonModule,
     MatDividerModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class DefaultModule {}
