@@ -1,5 +1,5 @@
 export class UsersModel {
-  user_name: String;
+  username: String;
   phone_number: number;
   name: String;
   email_address: String;

@@ -14,10 +14,10 @@
             
             <mat-form-field class="example-full-width">
               <mat-label>User Name</mat-label>
-              <input matInput placeholder="User Name" value="User name" formControlName="user_name" required>
+              <input matInput placeholder="User Name" value="User name" formControlName="username" required>
               <mat-hint>User Name</mat-hint>
-              <mat-error *ngIf="user_name.errors?.required" >Please enter a valid user name</mat-error>
-              <mat-error *ngIf="user_name.errors?.maxlength" >max length error</mat-error>             
+              <mat-error *ngIf="username.errors?.required" >Please enter a valid user name</mat-error>
+              <mat-error *ngIf="username.errors?.maxlength" >max length error</mat-error>             
             </mat-form-field>
 
 
@@ -61,7 +61,7 @@
               <mat-error>Please enter a password</mat-error>
             </mat-form-field>
 
-        <button mat-raised-button color="primary">Primary</button>
+        <button mat-raised-button color="primary" style="width: 100%; display: block;">Submit</button> 
       </form>
             
     </mat-card-content>

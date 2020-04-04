@@ -11,22 +11,30 @@
 
     <mat-card class="auth-card">
 
-        <form class="example-form">
+        <form class="example-form" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
             <mat-form-field class="example-full-width">
               <mat-label>User Name</mat-label>
-              <input matInput placeholder="Password">
+              <input matInput placeholder="User Name" value="User name" formControlName="username" required>
+              <mat-hint>User Name</mat-hint>
+              <mat-error *ngIf="username.errors?.required" >Please enter a valid user name</mat-error>
+              <mat-error *ngIf="username.errors?.maxlength" >max length error</mat-error>  
             </mat-form-field>
+
             <mat-form-field class="example-full-width">
               <mat-label>Password</mat-label>
-              <input matInput type="password" placeholder="Password">
-            </mat-form-field>    
+              <input matInput placeholder="Password" type="password" value="Password" formControlName="password" required>
+              <mat-hint> Password </mat-hint>
+              <mat-error>Please enter a password</mat-error>
+            </mat-form-field>
+        
+            <button mat-raised-button color="primary" style="width: 100%; display: block;">Submit</button>        
         </form>
 
 
-    <button mat-raised-button color="primary" style="width: 100%; display: block;">Submit</button> 
-    <div class="margin-top-50"></div>
-    <div class="margin-top-50"></div>
 
+    <div class="margin-top-50"></div>
+    <div class="margin-top-50"></div>
+    <mat-error>{{errorMsg}}</mat-error>
     <mat-divider></mat-divider>
     
     <div style="padding-top: 15px;"></div>

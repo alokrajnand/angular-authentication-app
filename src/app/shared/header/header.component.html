@@ -11,7 +11,8 @@
                 <button mat-icon-button ><mat-icon>settings</mat-icon></button>
                 <button mat-icon-button><mat-icon>help_outline</mat-icon></button>
                 <button mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>
-                <button mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Login</button> 
+                <button mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Login</button>
+                <button mat-raised-button color="primary" routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</button> 
                 <img src="../../assets/1.jpg" class="avatar">
                 <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
                     <mat-menu #menu="matMenu">
