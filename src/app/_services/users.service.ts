@@ -31,6 +31,12 @@ export class UsersService {
     localStorage.removeItem("token");
   }
 
+  ///logged In method for authenticaion
+
+  loggedIn() {
+    return !!localStorage.getItem("token");
+  }
+
   errorHandler(error: HttpErrorResponse) {
     return throwError(error.error.non_field_errors || "server Error");
   }

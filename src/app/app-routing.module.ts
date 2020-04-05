@@ -9,6 +9,7 @@ import { ForgetpasswordComponent } from "./pages/forgetpassword/forgetpassword.c
 import { ResetpasswordComponent } from "./pages/resetpassword/resetpassword.component";
 import { RestpasswordauthComponent } from "./pages/restpasswordauth/restpasswordauth.component";
 import { HomeComponent } from "./pages/home/home.component";
+import { AuthGuard } from "./_authguard/auth.guard";
 
 const routes: Routes = [
   {
@@ -16,7 +17,11 @@ const routes: Routes = [
     component: DefaultComponent,
     children: [
       { path: "", component: HomeComponent },
-      { path: "dashboard", component: DashboardComponent },
+      {
+        path: "dashboard",
+        component: DashboardComponent,
+        canActivate: [AuthGuard],
+      },
       { path: "posts", component: PostsComponent },
     ],
   },
