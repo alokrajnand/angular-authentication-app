@@ -7,12 +7,13 @@ import {
 import { UsersModel } from "../_models/users.model";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: "root",
 })
 export class UsersService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private _Router: Router) {}
 
   // method register
   register(user: UsersModel) {
@@ -29,6 +30,7 @@ export class UsersService {
   //method logout
   logout() {
     localStorage.removeItem("token");
+    this._Router.navigate(["/"]);
   }
 
   ///logged In method for authenticaion
