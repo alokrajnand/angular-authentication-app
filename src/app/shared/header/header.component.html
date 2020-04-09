@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-icon-button (click)="toggleSideBar()">
+    <button mat-icon-button (click)="toggleSideBar()" *ngIf="_UsersService.loggedIn()">
         <mat-icon>menu</mat-icon>
     </button>
 
@@ -11,7 +11,7 @@
                 <button mat-icon-button ><mat-icon>settings</mat-icon></button>
                 <button mat-icon-button><mat-icon>help_outline</mat-icon></button>
                 <button *ngIf="!_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>
-                <button *ngIf="!_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Login</button>
+                <button *ngIf="!_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Sign In</button>
                 <button *ngIf="_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</button> 
                 <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
                     <mat-menu #menu="matMenu">

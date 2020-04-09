@@ -1,1 +1,21 @@
-<p>posts works!</p>
+<mat-toolbar>
+  <span> All Courses </span>
+</mat-toolbar> 
+
+
+<mat-card class="card">
+<div fxLayout="row wrap">
+  <div fxFlex="20" fxFlex.sm="33.3" fxFlex.xs="50" *ngFor="let post of posts">
+
+    <mat-grid-list cols="1" rowHeight="3:2">
+<a [routerLink]="[post.post_id]">
+      <mat-grid-tile class="bg" >
+                <h1>{{ post.post_id }}</h1>
+                <p>{{ post.post_header }}</p>
+      </mat-grid-tile></a>
+    </mat-grid-list>  
+  </div>
+ </div>
+</mat-card>
+
+

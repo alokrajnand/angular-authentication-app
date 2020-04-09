@@ -10,6 +10,8 @@ import { ResetpasswordComponent } from "./pages/resetpassword/resetpassword.comp
 import { RestpasswordauthComponent } from "./pages/restpasswordauth/restpasswordauth.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { AuthGuard } from "./_authguard/auth.guard";
+import { CourseComponent } from "./pages/course/course.component";
+import { PostdetailComponent } from "./pages/postdetail/postdetail.component";
 
 const routes: Routes = [
   {
@@ -23,10 +25,13 @@ const routes: Routes = [
         canActivate: [AuthGuard],
       },
       { path: "posts", component: PostsComponent },
+      { path: "posts/:name", component: PostdetailComponent },
+      { path: "courses", component: CourseComponent },
+      { path: "signup", component: SignupComponent },
+      { path: "signin", component: SigninComponent },
     ],
   },
-  { path: "signup", component: SignupComponent },
-  { path: "signin", component: SigninComponent },
+
   { path: "forgetpassword", component: ForgetpasswordComponent },
   { path: "resetpasswordauth", component: RestpasswordauthComponent },
   { path: "resetpassword", component: ResetpasswordComponent },

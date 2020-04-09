@@ -1,9 +1,5 @@
 import { Injectable } from "@angular/core";
-import {
-  HttpClientModule,
-  HttpClient,
-  HttpErrorResponse,
-} from "@angular/common/http";
+import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { UsersModel } from "../_models/users.model";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";

@@ -6,3 +6,4 @@ export class UsersModel {
   date_of_birth: Date;
   password: String;
 }
+

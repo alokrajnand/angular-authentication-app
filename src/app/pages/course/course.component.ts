@@ -6,14 +6,16 @@ export interface Tile {
 }
 
 @Component({
-  selector: "app-home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.scss"],
+  selector: "app-course",
+  templateUrl: "./course.component.html",
+  styleUrls: ["./course.component.scss"],
 })
-export class HomeComponent implements OnInit {
+export class CourseComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.tiles);
+  }
   tiles: Tile[] = [
     { text: "One", color: "lightblue" },
     { text: "Two", color: "lightgreen" },
