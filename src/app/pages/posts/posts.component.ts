@@ -20,7 +20,7 @@ export class PostsComponent implements OnInit {
       this.posts = data;
       console.log(data);
     });
-/// get post by id
+
 
 
 

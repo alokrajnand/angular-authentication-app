@@ -2,7 +2,7 @@
 <mat-nav-list>
     <a mat-list-item routerLinkActive="list-item-active" routerLink=""> <i class="material-icons">home</i>Home</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard"> <i class="material-icons">folder</i>Dashboard</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts"><i class="material-icons">folder</i>posts</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/courses"><i class="material-icons">book</i>Courses</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts" [state]="{ ignoreLoadingBar: true }"><i class="material-icons">folder</i>posts</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/courses" [state]="{ ignoreLoadingBar: true }"><i class="material-icons">book</i>Courses</a>
 
 </mat-nav-list>

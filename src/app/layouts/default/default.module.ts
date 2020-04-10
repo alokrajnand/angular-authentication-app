@@ -39,7 +39,12 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { ScrollingModule } from "@angular/cdk/scrolling";
 
-import { InfiniteScrollModule } from "ngx-infinite-scroll";
+// for HttpClient import:
+import { LoadingBarHttpClientModule } from "@ngx-loading-bar/http-client";
+// for Router import:
+import { LoadingBarRouterModule } from "@ngx-loading-bar/router";
+// for Core import:
+import { LoadingBarModule } from "@ngx-loading-bar/core";
 
 @NgModule({
   declarations: [
@@ -73,7 +78,9 @@ import { InfiniteScrollModule } from "ngx-infinite-scroll";
     FormsModule,
     MatPaginatorModule,
     ReactiveFormsModule,
-    InfiniteScrollModule,
+    LoadingBarHttpClientModule,
+    LoadingBarRouterModule,
+    LoadingBarModule,
   ],
 })
 export class DefaultModule {}

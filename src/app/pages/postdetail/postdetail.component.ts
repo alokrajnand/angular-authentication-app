@@ -18,8 +18,6 @@ export class PostdetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this._ActivatedRoute);
-    console.log(this._ActivatedRoute.snapshot.params.name);
     this.id = this._ActivatedRoute.snapshot.params.name;
     this._PostService.getpostdetail(this.id).subscribe((data) => {
       console.log(data);

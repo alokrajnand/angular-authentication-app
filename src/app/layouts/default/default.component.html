@@ -1,3 +1,4 @@
+<ngx-loading-bar [includeSpinner]="false"></ngx-loading-bar>
 <app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
 <mat-drawer-container >
     <mat-drawer mode="side" [opened]="sideBarOpen" *ngIf="_UsersService.loggedIn()">

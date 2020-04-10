@@ -1,9 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-
-export interface Tile {
-  color: string;
-  text: string;
-}
+import { CourseService } from "src/app/_services/course.service";
+import { CourseModel } from "src/app/_models/course.model";
 
 @Component({
   selector: "app-course",
@@ -11,18 +8,16 @@ export interface Tile {
   styleUrls: ["./course.component.scss"],
 })
 export class CourseComponent implements OnInit {
-  constructor() {}
+  /// Declear  variable
+  courses: CourseModel[] = [];
+
+  constructor(private _CourseService: CourseService) {}
 
   ngOnInit(): void {
-    console.log(this.tiles);
+    ////  Get all Posts
+    this._CourseService.getAllCourses().subscribe((data: any) => {
+      this.courses = data;
+      console.log(data);
+    });
   }
-  tiles: Tile[] = [
-    { text: "One", color: "lightblue" },
-    { text: "Two", color: "lightgreen" },
-    { text: "Three", color: "lightpink" },
-    { text: "Four", color: "#DDBDF1" },
-    { text: "Five", color: "lightblue" },
-    { text: "Six", color: "lightgreen" },
-    { text: "Seven", color: "lightpink" },
-  ];
 }
