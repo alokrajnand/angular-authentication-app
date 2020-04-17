@@ -20,4 +20,7 @@ export class CourseComponent implements OnInit {
       console.log(data);
     });
   }
+  onScroll() {
+    console.log("scrolled!!");
+  }
 }

@@ -21,9 +21,5 @@ export class PostsComponent implements OnInit {
       console.log(data);
     });
 
-
-
-
-
   }
 }

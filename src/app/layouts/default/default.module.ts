@@ -38,7 +38,7 @@ import { MatDividerModule } from "@angular/material/divider";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { ScrollingModule } from "@angular/cdk/scrolling";
-
+import { MatSelectModule } from "@angular/material/select";
 // for HttpClient import:
 import { LoadingBarHttpClientModule } from "@ngx-loading-bar/http-client";
 // for Router import:
@@ -46,6 +46,10 @@ import { LoadingBarRouterModule } from "@ngx-loading-bar/router";
 // for Core import:
 import { LoadingBarModule } from "@ngx-loading-bar/core";
 
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { SchoolComponent } from "../../pages/school/school.component";
+import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.component";
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -59,6 +63,8 @@ import { LoadingBarModule } from "@ngx-loading-bar/core";
     ForgetpasswordComponent,
     ResetpasswordComponent,
     RestpasswordauthComponent,
+    SchoolComponent,
+    SchooldetailComponent,
   ],
   imports: [
     CommonModule,
@@ -73,6 +79,7 @@ import { LoadingBarModule } from "@ngx-loading-bar/core";
     MatButtonModule,
     MatDividerModule,
     MatGridListModule,
+    MatSelectModule,
     FlexLayoutModule,
     ScrollingModule,
     FormsModule,
@@ -81,6 +88,7 @@ import { LoadingBarModule } from "@ngx-loading-bar/core";
     LoadingBarHttpClientModule,
     LoadingBarRouterModule,
     LoadingBarModule,
+    InfiniteScrollModule,
   ],
 })
 export class DefaultModule {}

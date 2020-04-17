@@ -12,6 +12,8 @@ import { HomeComponent } from "./pages/home/home.component";
 import { AuthGuard } from "./_authguard/auth.guard";
 import { CourseComponent } from "./pages/course/course.component";
 import { PostdetailComponent } from "./pages/postdetail/postdetail.component";
+import { SchooldetailComponent } from "./pages/schooldetail/schooldetail.component";
+import { SchoolComponent } from "./pages/school/school.component";
 
 const routes: Routes = [
   {
@@ -27,6 +29,11 @@ const routes: Routes = [
       { path: "posts", component: PostsComponent },
       { path: "posts/:name", component: PostdetailComponent },
       { path: "courses", component: CourseComponent },
+      {
+        path: "schools",
+        component: SchoolComponent,
+      },
+      { path: "schools/:schoolname", component: SchooldetailComponent },
       { path: "signup", component: SignupComponent },
       { path: "signin", component: SigninComponent },
     ],

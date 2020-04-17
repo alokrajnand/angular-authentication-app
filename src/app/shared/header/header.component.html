@@ -4,20 +4,35 @@
         <mat-icon>menu</mat-icon>
     </button>
 
-    <span> MY LOGO </span>
+    <span class= "logo"> MY LOGO </span>
 
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
         <ul fxLayout="row" fxLayoutGap="20px">
-                <button mat-icon-button ><mat-icon>settings</mat-icon></button>
-                <button mat-icon-button><mat-icon>help_outline</mat-icon></button>
-                <button *ngIf="!_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>
-                <button *ngIf="!_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Sign In</button>
-                <button *ngIf="_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</button> 
-                <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+          <!-- If the device is extra Small -->      
+                <div *ngIf="deviceXs"> 
+                  <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>settings</mat-icon></button>
                     <mat-menu #menu="matMenu">
-                        <button mat-menu-item>Item 1</button>
-                        <button mat-menu-item>Item 2</button>
+                      <mat-nav-list>
+                        <a mat-list-item *ngIf="!_UsersService.loggedIn()" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</a>
+                        <a mat-list-item *ngIf="!_UsersService.loggedIn()" routerLinkActive="list-item-active" routerLink="/signin">Sign In</a>
+                        <a mat-list-item *ngIf="_UsersService.loggedIn()"  routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</a> 
+                     </mat-nav-list>     
                     </mat-menu> 
+                </div>
+
+          <!-- If the device is tablet Sm -->      
+                <div *ngIf="deviceSm"> 
+                        <button *ngIf="!_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>
+                        <button *ngIf="!_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Sign In</button>
+                        <button *ngIf="_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</button> 
+                </div>
+          <!-- If the device is Large laptop and bigger than laptop -->      
+                <div *ngIf="deviceMd || deviceLg"> 
+                        <button *ngIf="!_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>
+                        <button *ngIf="!_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Sign In</button>
+                        <button *ngIf="_UsersService.loggedIn()" mat-raised-button color="primary" routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</button> 
+                </div>
+
 
         </ul>
     </div>

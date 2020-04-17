@@ -1,14 +1,14 @@
 ul li {
   list-style: none;
 }
-.avatar {
-  vertical-align: middle;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid grey;
-}
 
-.md-button {
-  border-color: transparent !important;
-}
+@media (max-width: 599px) {
+  .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    height: 56px;
+    padding: 0px;
+  }
+  .logo {
+    margin-left: 5px;
+  }
+} // media max with 599 px ends

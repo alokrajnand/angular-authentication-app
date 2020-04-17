@@ -5,6 +5,8 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { DefaultModule } from "./layouts/default/default.module";
 import { AuthGuard } from "./_authguard/auth.guard";
+import { SchoolComponent } from './pages/school/school.component';
+import { SchooldetailComponent } from './pages/schooldetail/schooldetail.component';
 
 @NgModule({
   declarations: [AppComponent],
