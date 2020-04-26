@@ -11,6 +11,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatMenuModule } from "@angular/material/menu";
 import { RouterModule } from "@angular/router";
 import { MatListModule } from "@angular/material/list";
+import { MatCardModule } from "@angular/material/card";
+import { MatBadgeModule } from "@angular/material/badge";
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
@@ -23,8 +25,10 @@ import { MatListModule } from "@angular/material/list";
     FlexLayoutModule,
     MatMenuModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    MatCardModule,
+    MatBadgeModule,
   ],
-  exports: [HeaderComponent, FooterComponent, SidebarComponent]
+  exports: [HeaderComponent, FooterComponent, SidebarComponent],
 })
 export class SharedModule {}

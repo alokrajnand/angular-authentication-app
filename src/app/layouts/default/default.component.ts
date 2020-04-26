@@ -16,6 +16,7 @@ export class DefaultComponent implements OnInit, OnDestroy {
   deviceSm: boolean;
   deviceMd: boolean;
   deviceLg: boolean;
+  deviceXl: boolean;
   mode = "";
 
   constructor(
@@ -30,7 +31,7 @@ export class DefaultComponent implements OnInit, OnDestroy {
         this.deviceSm = result.mqAlias === "sm" ? true : false;
         this.deviceMd = result.mqAlias === "md" ? true : false;
         this.deviceLg = result.mqAlias === "lg" ? true : false;
-        this.deviceLg = result.mqAlias === "xl" ? true : false;
+        this.deviceXl = result.mqAlias === "xl" ? true : false;
       }
     );
 

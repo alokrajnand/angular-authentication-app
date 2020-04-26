@@ -1,8 +1,41 @@
-<h2 matSubheader>MY APP</h2>
-<mat-nav-list>
+<div class="sidebar">
+
+<mat-card class="user-card">
+    <img class="user-mat-card-avatar" mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+    <div class="user-card">             
+        <mat-card-title class="user-card-title">Amol Parekar</mat-card-title>
+        <mat-card-subtitle class="user-card-subtitle">Tech Blogger and Writter</mat-card-subtitle>
+    </div>
+    <button class="user-card-button"mat-raised-button color="accent">View Profile</button>
+</mat-card>
+
+
+<div class="user-bedge">
+    <div fxLayout="row" fxLayoutAlign="space-around  center">
+        <button mat-icon-button ><i class="devicon-facebook-plain colored"></i></button>
+        <button mat-icon-button ><i class="devicon-twitter-plain colored"></i></button>
+        <button mat-icon-button ><i class="devicon-github-plain colored"></i></button>
+        <button mat-icon-button ><i class="material-icons">email</i></button>
+        <button mat-icon-button ><i class="material-icons" matBadge="5" matBadgeColor="accent" matBadgeOverlap="true">notification_important</i></button>
+    </div>
+</div>
+
+
+<div class="sidenav-heading">Application</div>
+
+<mat-nav-list class="side-nav">
     <a mat-list-item routerLinkActive="list-item-active" routerLink=""> <i class="material-icons">home</i>Home</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard"> <i class="material-icons">folder</i>Dashboard</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts" [state]="{ ignoreLoadingBar: true }"><i class="material-icons">folder</i>posts</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard"> <i class="material-icons">dashboard</i>Dashboard</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts" [state]="{ ignoreLoadingBar: true }"><i class="material-icons">description</i>Posts</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/courses" [state]="{ ignoreLoadingBar: true }"><i class="material-icons">book</i>Courses</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/schools" [state]="{ ignoreLoadingBar: true }"><i class="material-icons">school</i>School</a>
 </mat-nav-list>
+<mat-divider></mat-divider>
+<div class="sidenav-heading" >Website</div>
+<mat-nav-list class="side-nav">
+    <a mat-list-item routerLinkActive="list-item-active"> <i class="material-icons">language</i>Travel And Tech</a>
+    <a mat-list-item routerLinkActive="list-item-active"> <i class="material-icons">language</i>Nand University</a>
+</mat-nav-list>
+
+
+</div>

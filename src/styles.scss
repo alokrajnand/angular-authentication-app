@@ -1,4 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+/* This is the global Font used in this project*/
+@font-face {
+  font-family: PTSansCaption-regular;
+  src: url(./assets/font/PTSansCaption-Regular.ttf);
+}
+@font-face {
+  font-family: PTSansCaption-bold;
+  src: url(./assets/font/PTSansCaption-Bold.ttf);
+}
+
+.mat-typography {
+  font-family: PTSansCaption-regular;
+}
+.mat-typography p {
+  font-family: PTSansCaption-regular;
+}
+
+.mat-typography h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: PTSansCaption-bold;
+}
+mat-toolbar h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: PTSansCaption-bold;
+}
+
+.mat-drawer {
+  position: relative;
+  box-shadow: 1px 1px 2px 1px #888888 !important;
+  border-right: none;
+}

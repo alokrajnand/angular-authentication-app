@@ -1,23 +1,58 @@
-<mat-toolbar>
-  <span> All Posts </span>
-</mat-toolbar> 
+<mat-toolbar class="header">
+  <mat-toolbar-row class="header-row">
+    <span class="material-icons ">description</span>
+    <span class= "logo">  
+      <h2 class="heading">Posts</h2>
+      <p class="subheading">All the beautifull and informatic posts </p>
+    </span>
 
-<div
-      *ngFor="let post of posts">
-          <mat-card class="example-card">
-              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-              <mat-card-content>
-                <p>
-                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                  bred for hunting.
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-              </mat-card-actions>
-            </mat-card>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGap="20px">
+          <div class="cat-dd">
+            <mat-form-field appearance="fill" class="cat-search">
+              <mat-label><i class="devicon-facebook-plain colored"></i> Select Category</mat-label>
+              <mat-select>
+                <mat-option value="option">All Posts</mat-option>
+                <mat-option value="option">Angular</mat-option>
+                <mat-option value="option">Google Cloud</mat-option>
+                <mat-option value="option">Wordpress</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+      </ul>
+    </div>
+
+
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+
+<div class="container">
+<div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10" >
+  <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" 
+  fxFlex.gt-md="0 1 calc(25%-10px)"  fxFlex.lg="0 1 calc(25%-10px)"  fxFlex.xl="0 1 calc(20%-10px)" *ngFor="let post of posts">
+    <img mat-card-image src="https://drive.google.com/uc?id=1qDHKdAyhHMtkiRPxII9hO2UYwlAG-W-2" class="image">
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>{{post.post_id}}</mat-card-subtitle>
+    <mat-card-content>Primary card content. Intended for blocks of text Primary card content. Intended 
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>
+          <a mat-button color="accent" [routerLink]="['/posts', post.post_id]" >Read More</a>
+          <div class="share-card">
+          <button mat-icon-button color="accent" aria-label="If you love it">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="accent" aria-label="share with your friends and family">
+            <mat-icon>share</mat-icon>
+          </button>
+          </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
 </div>
 
 

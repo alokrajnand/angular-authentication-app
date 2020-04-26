@@ -1,16 +1,59 @@
-.bg {
-  background-color: aquamarine;
-}
-.mat-grid-list {
-  margin: 1px;
+.header {
+  height: 100px;
 }
 
-.example-viewport {
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
+.mat-toolbar-row {
+  background-color: #fff;
+  padding: 50px;
+  box-shadow: 1px 1px 2px 1px #888888 !important;
+}
+.header-row .material-icons {
+  font-size: 40px;
+  background-color: #f4f5fd;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 1px #888888 !important;
+  padding: 10px;
 }
 
-.example-item {
-  height: 50px;
+.logo {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.heading {
+  font-size: 22px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.subheading {
+  font-size: 15px;
+  margin-top: 0px;
+  padding-top: 0px;
+  text-decoration: none;
+  color: #878dbb;
+}
+
+.container {
+  margin: 15px;
+}
+
+.mat-card {
+  margin-bottom: 10px;
+  border-radius: 0px;
+  padding-bottom: 3px;
+}
+.card-footer-link {
+  padding: 10px;
+}
+.share-card {
+  float: right;
+}
+
+.header-row .cat-dd {
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.mat-form-field {
+  border-bottom: none;
 }

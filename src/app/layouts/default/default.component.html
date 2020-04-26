@@ -1,6 +1,9 @@
 <ngx-loading-bar [includeSpinner]="false"></ngx-loading-bar>
-<app-header [deviceXs]="deviceXs" [deviceMd]="deviceMd" [deviceSm]="deviceSm" [deviceLg]="deviceLg"
-        (toggleSideBarForMe)="sideBarToggler()"></app-header>
+<!-- Header Component-->
+<app-header [deviceXs]="deviceXs" [deviceMd]="deviceMd" [deviceSm]="deviceSm" [deviceLg]="deviceLg" [deviceXl]="deviceXl"
+        (toggleSideBarForMe)="sideBarToggler()">
+</app-header>
+<!-- left Side drawer Component-->
 <mat-drawer-container >
     <mat-drawer [mode]="mode" [opened]="sideBarOpen" *ngIf="_UsersService.loggedIn()">
         <app-sidebar></app-sidebar>
@@ -8,6 +11,9 @@
     
     <mat-drawer-content>
         <router-outlet></router-outlet>
+        <app-footer></app-footer>
     </mat-drawer-content>
 </mat-drawer-container>
-<app-footer></app-footer>
+
+<!-- Footer Component-->
+

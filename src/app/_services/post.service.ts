@@ -21,9 +21,9 @@ export class PostService {
     return this.http.get<PostModel[]>(this.url);
   }
 
-  getpostdetail(id): Observable<PostModel[]> {
-    return this.http.get<PostModel[]>(
-      "https://jsonplaceholder.typicode.com/posts/" + id
+  getpostdetail(name: String): Observable<PostModel> {
+    return this.http.get<PostModel>(
+      "https://jsonplaceholder.typicode.com/posts/" + name
     );
   }
 }

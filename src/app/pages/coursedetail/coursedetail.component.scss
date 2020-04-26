@@ -1,0 +1,51 @@
+.mat-card {
+  background-color: transparent;
+  box-shadow: unset;
+  padding: 0px;
+}
+
+.mat-card-avatar {
+  border-radius: 3px;
+}
+.banner {
+  width: 100%;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, red, yellow);
+}
+
+.Post-header {
+  width: 50%;
+}
+.post-header-category-name {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  border-bottom: 5px solid green;
+}
+.post-header-content {
+  padding: 50px;
+}
+
+.post-banner-image {
+  width: 50%;
+}
+.post-banner-image-content {
+  padding: 50px;
+}
+
+.post-banner-image-content .mat-card-image {
+  border-radius: 5px;
+}
+
+/* about the course*/
+
+.point-video {
+  width: 20%;
+}
+.course-point {
+  width: 100%;
+}
+.course-point div {
+  width: 20%;
+  text-align: center;
+}

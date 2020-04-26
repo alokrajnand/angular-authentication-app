@@ -22,6 +22,7 @@ import { RestpasswordauthComponent } from "../../pages/restpasswordauth/restpass
 import { HomeComponent } from "../../pages/home/home.component";
 import { CourseComponent } from "../../pages/course/course.component";
 import { PostdetailComponent } from "../../pages/postdetail/postdetail.component";
+import { CoursedetailComponent } from "../../pages/coursedetail/coursedetail.component";
 /// The shared  module corrosponds to the shared component header , footer, sidebar
 import { SharedModule } from "src/app/shared/shared.module";
 
@@ -39,6 +40,9 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { ScrollingModule } from "@angular/cdk/scrolling";
 import { MatSelectModule } from "@angular/material/select";
+import { MatIconModule } from "@angular/material/icon";
+import { MatTabsModule } from "@angular/material/tabs";
+import { MatBadgeModule } from "@angular/material/badge";
 // for HttpClient import:
 import { LoadingBarHttpClientModule } from "@ngx-loading-bar/http-client";
 // for Router import:
@@ -50,6 +54,7 @@ import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { SchoolComponent } from "../../pages/school/school.component";
 import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.component";
+
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -65,6 +70,7 @@ import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.com
     RestpasswordauthComponent,
     SchoolComponent,
     SchooldetailComponent,
+    CoursedetailComponent,
   ],
   imports: [
     CommonModule,
@@ -80,6 +86,9 @@ import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.com
     MatDividerModule,
     MatGridListModule,
     MatSelectModule,
+    MatIconModule,
+    MatTabsModule,
+    MatBadgeModule,
     FlexLayoutModule,
     ScrollingModule,
     FormsModule,

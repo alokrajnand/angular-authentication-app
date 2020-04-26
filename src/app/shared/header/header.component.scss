@@ -1,3 +1,14 @@
+.header {
+  position: relative;
+  z-index: 2;
+  background-image: linear-gradient(90deg, #880e4f, #7a0945) !important;
+  box-shadow: 0px 1px 2px 1px #410101 !important;
+}
+
+.header-row {
+  color: white;
+}
+
 ul li {
   list-style: none;
 }
@@ -9,6 +20,36 @@ ul li {
     padding: 0px;
   }
   .logo {
-    margin-left: 5px;
+    margin-left: 10px;
   }
 } // media max with 599 px ends
+
+/*** Material button customization**/
+
+/* Success syling */
+
+.mat-button.mat-primary {
+  color: #ffffff;
+}
+.mat-button.mat-primary:hover {
+  background-color: #a8085d;
+}
+
+.header-icon-button:hover {
+  background-color: #a8085d;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    margin-left: 10px;
+  }
+}
+
+.header-icon-button {
+  margin-right: 5px;
+}
+
+.mat-card-avatar {
+  height: 35px;
+  width: 35px;
+}

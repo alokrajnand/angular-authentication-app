@@ -14,6 +14,7 @@ import { CourseComponent } from "./pages/course/course.component";
 import { PostdetailComponent } from "./pages/postdetail/postdetail.component";
 import { SchooldetailComponent } from "./pages/schooldetail/schooldetail.component";
 import { SchoolComponent } from "./pages/school/school.component";
+import { CoursedetailComponent } from "./pages/coursedetail/coursedetail.component";
 
 const routes: Routes = [
   {
@@ -28,7 +29,9 @@ const routes: Routes = [
       },
       { path: "posts", component: PostsComponent },
       { path: "posts/:name", component: PostdetailComponent },
+
       { path: "courses", component: CourseComponent },
+      { path: "courses/:name", component: CoursedetailComponent },
       {
         path: "schools",
         component: SchoolComponent,

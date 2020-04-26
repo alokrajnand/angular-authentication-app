@@ -9,8 +9,8 @@ import { PostModel } from "src/app/_models/post.model";
   styleUrls: ["./postdetail.component.scss"],
 })
 export class PostdetailComponent implements OnInit {
-  id = "";
-  postdetail: any;
+  name = "";
+  postdetail: any = "";
 
   constructor(
     private _ActivatedRoute: ActivatedRoute,
@@ -18,10 +18,10 @@ export class PostdetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.id = this._ActivatedRoute.snapshot.params.name;
-    this._PostService.getpostdetail(this.id).subscribe((data) => {
-      console.log(data);
+    this.name = this._ActivatedRoute.snapshot.params.name;
+    this._PostService.getpostdetail(this.name).subscribe((data) => {
       this.postdetail = data;
+      console.log(this.postdetail);
     });
   }
 }

@@ -10,10 +10,11 @@ export class HeaderComponent implements OnInit {
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
   //Input the the screen size from the default component
+  @Input() deviceXs: boolean;
   @Input() deviceMd: boolean;
   @Input() deviceSm: boolean;
-  @Input() deviceXs: boolean;
   @Input() deviceLg: boolean;
+  @Input() deviceXl: boolean;
 
   constructor(public _UsersService: UsersService) {}
 

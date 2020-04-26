@@ -1,3 +1,31 @@
-<mat-toolbar>
+<mat-toolbar class="header">
+  <mat-toolbar-row class="header-row">
+    <span class="material-icons">school</span>
+    <span class= "logo">  
+      <h2 class="heading">Schools</h2>
+      <p class="subheading">List of all School</p>
+    </span>
 
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGap="20px">
+       <form class="example-form">
+              <table class="example-full-width" cellspacing="0">
+                <tr>
+                  <td><mat-form-field class="example-full-width">
+                      <mat-label>School in your City</mat-label>
+                      <input matInput placeholder="Delhi">
+                      </mat-form-field>
+                  </td>
+                  <td>
+                      <button mat-raised-button color="accent">Search</button>
+                  </td>
+                </tr>
+              </table>
+          </form>
+      </ul>
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>
+
+
+school woorks!!:)
