@@ -1,11 +1,10 @@
 .header {
   height: 100px;
-  margin-bottom: 5px;
 }
 
 .mat-toolbar-row {
   background-color: #fff;
-  padding: 50px 15px;
+  padding: 50px;
   box-shadow: 1px 1px 2px 1px #888888 !important;
 }
 .header-row .material-icons {
@@ -18,7 +17,7 @@
 
 .logo {
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 .heading {
   font-size: 22px;
@@ -34,6 +33,15 @@
   color: #878dbb;
 }
 
+.container {
+  margin: 15px;
+}
+
+.mat-card {
+  margin-bottom: 10px;
+  border-radius: 0px;
+  padding-bottom: 3px;
+}
 .card-footer-link {
   padding: 10px;
 }
@@ -48,4 +56,9 @@
 }
 .mat-form-field {
   border-bottom: none;
+}
+
+.lession-content {
+  margin: 0 auto;
+  text-align: center;
 }

@@ -13,13 +13,13 @@ export class UsersService {
 
   // method register
   register(user: UsersModel) {
-    return this.http.post("http://127.0.0.1:8000/api/register/", user);
+    return this.http.post("http://127.0.0.1:8000/api/user/register/", user);
   }
 
   ///method login
   login(user: UsersModel): Observable<UsersModel[]> {
     return this.http
-      .post<UsersModel[]>("http://127.0.0.1:8000/api/login/", user)
+      .post<UsersModel[]>("http://127.0.0.1:8000/api/user/login/", user)
       .pipe(catchError(this.errorHandler));
   }
 

@@ -1,4 +1,8 @@
 import { Component, OnInit } from "@angular/core";
+import { PostService } from "src/app/_services/post.service";
+import { PostModel } from "src/app/_models/post.model";
+import { CourseService } from "src/app/_services/course.service";
+import { CourseModel } from "src/app/_models/course.model";
 
 export interface Tile {
   color: string;
@@ -11,16 +15,24 @@ export interface Tile {
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  posts: PostModel[] = [];
+  courses: CourseModel[] = [];
+  constructor(
+    private _PostService: PostService,
+    private _CourseService: CourseService
+  ) {}
 
-  ngOnInit(): void {}
-  tiles: Tile[] = [
-    { text: "One", color: "lightblue" },
-    { text: "Two", color: "lightgreen" },
-    { text: "Three", color: "lightpink" },
-    { text: "Four", color: "#DDBDF1" },
-    { text: "Five", color: "lightblue" },
-    { text: "Six", color: "lightgreen" },
-    { text: "Seven", color: "lightpink" },
-  ];
+  ngOnInit(): void {
+    ////  Get all Posts
+    this._PostService.getAllPost().subscribe((data: any) => {
+      this.posts = data;
+      console.log(data);
+    });
+
+    ////  Get all Posts
+    this._CourseService.getAllCourses().subscribe((data: any) => {
+      this.courses = data;
+      console.log(data);
+    });
+  }
 }

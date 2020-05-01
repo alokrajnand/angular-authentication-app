@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { CourseService } from "src/app/_services/course.service";
 import { CourseModel } from "src/app/_models/course.model";
 
+
 @Component({
   selector: "app-course",
   templateUrl: "./course.component.html",
@@ -20,7 +21,6 @@ export class CourseComponent implements OnInit {
       console.log(data);
     });
   }
-  onScroll() {
-    console.log("scrolled!!");
-  }
+
+
 }

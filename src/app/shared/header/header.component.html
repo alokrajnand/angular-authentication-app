@@ -30,7 +30,8 @@
                 <div *ngIf="deviceMd || deviceLg || deviceXl"> 
                         <button  class="header-icon-button" mat-icon-button color="test" routerLink=""><mat-icon>home</mat-icon></button>
                         <button  class="header-icon-button" mat-icon-button color="test" routerLink="/schools"><mat-icon>school</mat-icon></button>
-                        <button  class="header-icon-button" mat-icon-button color="test" routerLink="/courses"><mat-icon>book</mat-icon></button>                        
+                        <button  class="header-icon-button" mat-icon-button color="test" routerLink="/courses"><mat-icon>book</mat-icon></button>     
+                        <button  class="header-icon-button" mat-icon-button color="test" routerLink="/posts"><mat-icon>description</mat-icon></button>                                                 
                         <button *ngIf="_UsersService.loggedIn()" class="header-icon-button" mat-icon-button color="test" ><mat-icon>dashboard</mat-icon></button>
                         
                         <button *ngIf="!_UsersService.loggedIn()" mat-button color="primary" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>

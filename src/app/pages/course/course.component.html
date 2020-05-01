@@ -28,27 +28,26 @@
 </mat-toolbar>
 
 
-<div class="container">
-<div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10" >
-  <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" 
-  fxFlex.gt-md="0 1 calc(25%-10px)"  fxFlex.lg="0 1 calc(25%-10px)"  fxFlex.xl="0 1 calc(20%-10px)" *ngFor="let course of courses">
-    <img mat-card-image src="https://drive.google.com/uc?id=1qDHKdAyhHMtkiRPxII9hO2UYwlAG-W-2" class="image">
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>{{course.course_id}}</mat-card-subtitle>
-    <mat-card-content>Primary card content. Intended for blocks of text Primary card content. Intended 
-    </mat-card-content>
-    <mat-divider></mat-divider>
-    <mat-card-actions>
-          <a mat-button color="accent" [routerLink]="['/courses', course.course_id]" >Read More</a>
-          <div class="share-card">
-          <button mat-icon-button color="accent" aria-label="If you love it">
-            <mat-icon>favorite</mat-icon>
-          </button>
-          <button mat-icon-button color="accent" aria-label="share with your friends and family">
-            <mat-icon>share</mat-icon>
-          </button>
-          </div>
-    </mat-card-actions>
-  </mat-card>
+<div class="card-container">
+<div class="card-box">
+
+
+    <div *ngFor="let course of courses">
+        <mat-card class="list-card">
+          <img mat-card-image class="post-card-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-title class="card-title">{{course.title}}</mat-card-title>
+          <mat-card-subtitle>Author - Dog Breed</mat-card-subtitle>
+          <mat-card-content>
+          <p>{{course.body}}</p>
+          </mat-card-content>
+          
+          <mat-card-actions>
+            <button class="post-card-button" mat-stroked-button  color="accent">Read Here</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+
+
+
 </div>
 </div>

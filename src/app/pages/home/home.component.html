@@ -1,44 +1,59 @@
-<mat-toolbar>
-  <span> My Home</span>
+<mat-toolbar class="header">
+  <mat-toolbar-row class="header-row">
+    <span class="material-icons ">home</span>
+    <span class= "logo">  
+      <h2 class="heading"> Home</h2>
+      <p class="subheading">Your Learning start from one single steps</p>
+    </span>
+  </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-card class="card">
-  <mat-card-title>Posts</mat-card-title>
-  <mat-card-subtitle>
-    Top Posts on the platform<br>
-  </mat-card-subtitle>
-<mat-card-content>
 
-<div fxLayout="row wrap">
-  <div fxFlex="25" fxFlex.sm="33.3" fxFlex.xs="50" *ngFor="let tile of tiles">
-    
-    <mat-grid-list cols="1" rowHeight="3:2"  >
-      <mat-grid-tile [style.background]="tile.color" >
-                {{ tile.text }}
-      </mat-grid-tile>
-    </mat-grid-list>  
-  </div>
- </div>
- </mat-card-content>
+<mat-card>
+<mat-card-title> Recent Course </mat-card-title>
+
+    <div class="card-container">
+      <div class="card-box">
+        <div *ngFor="let course of courses | slice:0:4">
+            <mat-card class="list-card">
+              <img mat-card-image class="post-card-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-title class="card-title">{{course.title}}</mat-card-title>
+              <mat-card-subtitle>Author - Dog Breed</mat-card-subtitle>
+              <mat-card-content>
+              <p>{{course.body}}</p>
+              </mat-card-content>
+              
+              <mat-card-actions>
+                <button class="post-card-button" mat-stroked-button  color="accent">Read Here</button>
+              </mat-card-actions>
+            </mat-card>
+        </div>
+      </div>
+    </div>
 </mat-card>
 
-<div style=" margin-top:10px" ></div>
-<mat-card class="card">
-  <mat-card-title>Courses</mat-card-title>
-  <mat-card-subtitle>
-    Top Coures on the platform<br>
-  </mat-card-subtitle>
-<mat-card-content>
 
-<div fxLayout="row wrap">
-  <div fxFlex="25" fxFlex.sm="33.3" fxFlex.xs="50" *ngFor="let tile of tiles">
-    
-    <mat-grid-list cols="1" rowHeight="3:2">
-      <mat-grid-tile [style.background]="tile.color" >
-                {{ tile.text }}
-      </mat-grid-tile>
-    </mat-grid-list>  
-  </div>
- </div>
- </mat-card-content>
+
+<mat-card>
+<mat-card-title> Recent Posts </mat-card-title>
+
+    <div class="card-container">
+      <div class="card-box">
+        <div *ngFor="let course of courses | slice:0:4">
+            <mat-card class="list-card">
+              <img mat-card-image class="post-card-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-title class="card-title">{{course.title}}</mat-card-title>
+              <mat-card-subtitle>Author - Dog Breed</mat-card-subtitle>
+              <mat-card-content>
+              <p>{{course.body}}</p>
+              </mat-card-content>
+              
+              <mat-card-actions>
+                <button class="post-card-button" mat-stroked-button  color="accent">Read Here</button>
+              </mat-card-actions>
+            </mat-card>
+        </div>
+      </div>
+    </div>
 </mat-card>
+

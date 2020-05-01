@@ -23,6 +23,7 @@ import { HomeComponent } from "../../pages/home/home.component";
 import { CourseComponent } from "../../pages/course/course.component";
 import { PostdetailComponent } from "../../pages/postdetail/postdetail.component";
 import { CoursedetailComponent } from "../../pages/coursedetail/coursedetail.component";
+import { LessonComponent } from "../../pages/lesson/lesson.component";
 /// The shared  module corrosponds to the shared component header , footer, sidebar
 import { SharedModule } from "src/app/shared/shared.module";
 
@@ -43,6 +44,9 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatIconModule } from "@angular/material/icon";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatBadgeModule } from "@angular/material/badge";
+import { MatChipsModule } from "@angular/material/chips";
+import { MatExpansionModule } from "@angular/material/expansion";
+import { MatProgressBarModule } from "@angular/material/progress-bar";
 // for HttpClient import:
 import { LoadingBarHttpClientModule } from "@ngx-loading-bar/http-client";
 // for Router import:
@@ -71,6 +75,7 @@ import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.com
     SchoolComponent,
     SchooldetailComponent,
     CoursedetailComponent,
+    LessonComponent,
   ],
   imports: [
     CommonModule,
@@ -89,6 +94,9 @@ import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.com
     MatIconModule,
     MatTabsModule,
     MatBadgeModule,
+    MatExpansionModule,
+    MatProgressBarModule,
+    MatChipsModule,
     FlexLayoutModule,
     ScrollingModule,
     FormsModule,

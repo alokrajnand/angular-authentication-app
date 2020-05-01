@@ -8,42 +8,89 @@ body {
   margin: 0;
 }
 
-/* This is the global Font used in this project*/
-@font-face {
-  font-family: PTSansCaption-regular;
-  src: url(./assets/font/PTSansCaption-Regular.ttf);
-}
-@font-face {
-  font-family: PTSansCaption-bold;
-  src: url(./assets/font/PTSansCaption-Bold.ttf);
-}
+/***   **/
 
-.mat-typography {
-  font-family: PTSansCaption-regular;
-}
-.mat-typography p {
-  font-family: PTSansCaption-regular;
-}
-
-.mat-typography h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: PTSansCaption-bold;
-}
-mat-toolbar h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  font-family: PTSansCaption-bold;
-}
-
+/*** global style for the card  Design for the card to be masonary style ***/
 .mat-drawer {
   position: relative;
   box-shadow: 1px 1px 2px 1px #888888 !important;
   border-right: none;
+}
+
+/*** global style for the card  Design for the card to be masonary style ***/
+.card-container {
+  width: 98%;
+  margin: 10px auto;
+  //columns: 5;
+  column-gap: 10px;
+}
+.container .card-box {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  //break-inside: avoid;
+}
+.list-card {
+  break-inside: avoid;
+  margin-bottom: 10px;
+  border-radius: 10px !important;
+}
+
+.mat-card-image:first-child {
+  border-radius: 10px !important;
+}
+
+.post-card-image {
+  border-radius: 10px;
+}
+.card-title {
+  font-size: 1.1875rem;
+  font-weight: 400 !important;
+  margin-bottom: 10px !important;
+}
+.mat-card-actions {
+  text-align: center;
+  margin-bottom: 5px !important;
+  border-radius: 10px !important;
+}
+.post-card-button {
+  border: 1px solid currentColor;
+  padding: 0 15px !important;
+  line-height: 30px !important;
+  border-radius: 5px !important;
+}
+
+/**** ***/
+@media only screen and (min-width: 426px) {
+  .card-container {
+    width: 98%;
+    margin: 10px auto;
+    columns: 2;
+    column-gap: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card-container {
+    width: 98%;
+    margin: 10px auto;
+    columns: 3;
+    column-gap: 10px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .card-container {
+    width: 98%;
+    margin: 10px auto;
+    columns: 4;
+    column-gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .card-container {
+    width: 98%;
+    margin: 10px auto;
+    columns: 4;
+    column-gap: 10px;
+  }
 }

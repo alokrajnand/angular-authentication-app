@@ -1,0 +1,51 @@
+/*** global style for the card  Design for the card to be masonary style ***/
+.card-container {
+  width: 98%;
+  margin: 10px auto;
+  //columns: 5;
+  column-gap: 10px;
+}
+.container .card-box {
+  width: 100%;
+  overflow: hidden;
+  //break-inside: avoid;
+}
+.list-card {
+  break-inside: avoid;
+  margin-bottom: 10px;
+}
+
+/**** ***/
+@media only screen and (min-width: 426px) {
+  .container {
+    width: 98%;
+    margin: 10px auto;
+    columns: 2;
+    column-gap: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 98%;
+    margin: 10px auto;
+    columns: 3;
+    column-gap: 10px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container {
+    width: 98%;
+    margin: 10px auto;
+    columns: 4;
+    column-gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    width: 98%;
+    margin: 10px auto;
+    columns: 5;
+    column-gap: 10px;
+  }
+}
