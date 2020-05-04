@@ -1,1 +1,262 @@
-<p>schooldetail works!</p>
+<mat-toolbar class="header">
+  <mat-toolbar-row class="header-row">
+    <span class="material-icons">school</span>
+    <span class= "logo">  
+      <h2 class="heading">Schools</h2>
+      <p class="subheading">List of all School</p>
+    </span>
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGap="20px">
+       <form class="example-form">
+              <table class="example-full-width" cellspacing="0">
+                <tr>
+                  <td><mat-form-field class="example-full-width">
+                      <mat-label>School in your City</mat-label>
+                      <input matInput placeholder="Delhi">
+                      </mat-form-field>
+                  </td>
+                  <td>
+                      <button mat-raised-button color="accent">Search</button>
+                  </td>
+                </tr>
+              </table>
+          </form>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<div class="school-container">
+  <mat-card class="school-banner" fxLayout="row" fxLayoutAlign="space-between center" >   
+        <div class="school-card-container">
+              <mat-card class="school-card">
+                  <img class="school-card-pi"  mat-card-avatar  src="https://material.angular.io/assets/img/examples/shiba2.jpg"  >
+                  <mat-card-title>{{schooldetail.school_Name}}</mat-card-title>
+                  <mat-card-subtitle>Kankarbag | Patna | Bihar </mat-card-subtitle>
+                <mat-card-actions>
+
+                </mat-card-actions>
+              </mat-card>
+        </div>
+        <img class="mat-card-sb-image"  src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+
+  </mat-card>
+<!--   -->
+  <div class="school-badge" fxLayout="row" fxLayoutAlign="space-between center" >  
+    <mat-card>
+      <span class="material-icons">wc</span>
+      <h2> Co-Eucation</h2>
+    </mat-card>
+    <mat-card>
+      <span class="material-icons">security</span>
+      <h2> Board - CBSC</h2>
+    </mat-card>
+    <mat-card>
+      <span class="material-icons">text_format</span>
+      <h2> Medium - English</h2>
+    </mat-card>
+    <mat-card>      
+      <span class="material-icons">account_balance</span>
+      <h2> Type - Private</h2>
+    </mat-card>
+  </div>
+
+<!---    -->
+  <div class="school-main" fxLayout="row" fxLayoutAlign="space-between start" >  
+    <mat-card class="school-main-content">
+        <mat-tab-group mat-stretch-tabs>
+          <mat-tab label="About">          
+          <div class="about-container">
+
+
+              <mat-card class="about-general-info">
+                  <mat-card-title> General Information</mat-card-title>
+                  <mat-divider></mat-divider>
+                
+                <mat-card-content>
+                  <div class="" fxLayout="row" fxLayoutAlign="space-between  none" >                
+                    <div class="test1">
+                        <div fxLayout="column" fxLayoutAlign="start start">
+                                <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
+                                    <span class="material-icons">location_on</span>
+                                    <span class="gi-row-info">Address : Community Hall, Patna Central School Road Opp. Maurya Bihar, Jaganpura, Sudarshan Vihar, Patna, Bihar 800027</span>
+                                </div>
+                                
+                                <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
+                                    <span class="material-icons">smartphone</span>
+                                    <span class="gi-row-info">Phone : +91 8790423334 , +91 4082308874</span>
+                                </div>   
+
+                                <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
+                                    <span class="material-icons">cake</span>
+                                    <span class="gi-row-info">Foundation Date : 02-02-1987</span>
+                                </div>  
+                        </div>
+                    </div>
+                    <div class="test1">
+                        <div fxLayout="column" fxLayoutAlign="start start">
+                                <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
+                                    <span class="material-icons">mail</span>
+                                    <span class="gi-row-info"> Email : admin@nanduniversity.com </span>
+                                </div>
+                                
+                                <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
+                                    <span class="material-icons">public</span>
+                                    <span class="gi-row-info"> Website : nanduniverssity.com</span>
+                                </div>                    
+                        </div>                                     
+                    </div>
+                  
+                  
+                  </div>
+                </mat-card-content>
+              </mat-card>                  
+          
+
+
+<!----   -->
+
+
+              <mat-card class="about-other-desc">
+                  <mat-card-title> About </mat-card-title>
+                  <mat-divider></mat-divider>
+                <mat-card-content class="school-about">
+                <p>Acharya Sudarshan Patna Central School Patna, is a Senior Secondary School (XI-XII), affiliated to Central Board of Secondary Education (CBSE). The School is a Coed Day Cum Boarding School, with classes from Nursery to XII. It is an English Medium school. The school is located in Patna. Acharya Sudarshan Patna Central School was established in 1980. It is a Trust and is part of Acharya Sudarshan Patna central school and is managed by .
+Acharya Sudarshan Patna Central School is a Coed Day Cum Boarding School, which services the educational need of over NA students from Nursery through XII. The classes in Acharya Sudarshan Patna Central School for every academic year starts from April to March
+The School got affiliated to CBSE upto +2 level in 1993.</p>
+
+                <p>Acharya Sudarshan Patna Central School Patna, is a Senior Secondary School (XI-XII), affiliated to Central Board of Secondary Education (CBSE). The School is a Coed Day Cum Boarding School, with classes from Nursery to XII. It is an English Medium school. The school is located in Patna. Acharya Sudarshan Patna Central School was established in 1980. It is a Trust and is part of Acharya Sudarshan Patna central school and is managed by .
+Acharya Sudarshan Patna Central School is a Coed Day Cum Boarding School, which services the educational need of over NA students from Nursery through XII. The classes in Acharya Sudarshan Patna Central School for every academic year starts from April to March
+The School got affiliated to CBSE upto +2 level in 1993.</p>
+
+
+                </mat-card-content>
+              </mat-card>             
+          
+          
+          
+          </div>
+          </mat-tab>
+<!-----   -->
+
+          <mat-tab label="Fee Structure">
+          <div class="Facilities-container" fxLayout="row wrap" fxLayoutAlign="space-between start" >  
+                <mat-card class="facilities-card">
+                  <span class="material-icons">wc</span>
+                  <h2> Co-Eucation</h2>
+                </mat-card>
+                <mat-card class="facilities-card">
+                  <span class="material-icons">security</span>
+                  <h2> Board - CBSC</h2>
+                </mat-card>
+                <mat-card class="facilities-card">
+                  <span class="material-icons">text_format</span>
+                  <h2> Medium - English</h2>
+                </mat-card>
+                <mat-card class="facilities-card">      
+                  <span class="material-icons">account_balance</span>
+                  <h2> Type - Private</h2>
+                </mat-card>
+                 <mat-card class="facilities-card">
+                  <span class="material-icons">security</span>
+                  <h2> Board - CBSC</h2>
+                </mat-card>
+                <mat-card class="facilities-card">
+                  <span class="material-icons">text_format</span>
+                  <h2> Medium - English</h2>
+                </mat-card>
+                <mat-card class="facilities-card">      
+                  <span class="material-icons">account_balance</span>
+                  <h2> Type - Private</h2>
+                </mat-card>         
+                <mat-card class="facilities-card">      
+                  <span class="material-icons">account_balance</span>
+                  <h2> Type - Private</h2>
+                </mat-card>               
+                <mat-card class="facilities-card">      
+                  <span class="material-icons">account_balance</span>
+                  <h2> Type - Private</h2>
+                </mat-card>            
+          
+          </div>
+
+  
+              
+          </mat-tab>
+
+<!-----   -->          
+          <mat-tab label="Gallary"> 
+          <div class="gallery-container">
+              <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>  
+          </div>       
+          </mat-tab>
+<!-----   -->          
+          <mat-tab label="Facilities"> 
+               <div class="Facilities-container" fxLayout="row wrap" fxLayoutGap="2px" fxLayoutAlign="start" >  
+                <mat-card class="facilities-card">
+                  <span class="material-icons">wc</span>
+                  <h2> Co-Eucation</h2>
+                </mat-card>
+                <mat-card class="facilities-card">
+                  <span class="material-icons">security</span>
+                  <h2> Board - CBSC</h2>
+                </mat-card>
+                <mat-card class="facilities-card">
+                  <span class="material-icons">text_format</span>
+                  <h2> Medium - English</h2>
+                </mat-card>
+                <mat-card class="facilities-card">      
+                  <span class="material-icons">account_balance</span>
+                  <h2> Type - Private</h2>
+                </mat-card>
+                 <mat-card class="facilities-card">
+                  <span class="material-icons">security</span>
+                  <h2> Board - CBSC</h2>
+                </mat-card>
+                <mat-card class="facilities-card">
+                  <span class="material-icons">text_format</span>
+                  <h2> Medium - English</h2>
+                </mat-card>
+                <mat-card class="facilities-card">      
+                  <span class="material-icons">account_balance</span>
+                  <h2> Type - Private</h2>
+                </mat-card>         
+                <mat-card class="facilities-card">      
+                  <span class="material-icons">account_balance</span>
+                  <h2> Type - Private</h2>
+                </mat-card>               
+                <mat-card class="facilities-card">      
+                  <span class="material-icons">account_balance</span>
+                  <h2> Type - Private</h2>
+                </mat-card>            
+          
+          </div>         
+          </mat-tab>
+          
+<!---   -->          
+          <mat-tab label="Admission">
+              <mat-card class="about-other-desc">
+                  <mat-card-title> Admission Process </mat-card-title>
+                  <mat-divider></mat-divider>
+                <mat-card-content>
+                <p>Acharya Sudarshan Patna Central School Patna, is a Senior Secondary School (XI-XII), affiliated to Central Board of Secondary Education (CBSE). The School is a Coed Day Cum Boarding School, with classes from Nursery to XII. It is an English Medium school. The school is located in Patna. Acharya Sudarshan Patna Central School was established in 1980. It is a Trust and is part of Acharya Sudarshan Patna central school and is managed by .
+                Acharya Sudarshan Patna Central School is a Coed Day Cum Boarding School, which services the educational need of over NA students from Nursery through XII. The classes in Acharya Sudarshan Patna Central School for every academic year starts from April to March
+                The School got affiliated to CBSE upto +2 level in 1993.</p>
+
+                <p>Acharya Sudarshan Patna Central School Patna, is a Senior Secondary School (XI-XII), affiliated to Central Board of Secondary Education (CBSE). The School is a Coed Day Cum Boarding School, with classes from Nursery to XII. It is an English Medium school. The school is located in Patna. Acharya Sudarshan Patna Central School was established in 1980. It is a Trust and is part of Acharya Sudarshan Patna central school and is managed by .
+                Acharya Sudarshan Patna Central School is a Coed Day Cum Boarding School, which services the educational need of over NA students from Nursery through XII. The classes in Acharya Sudarshan Patna Central School for every academic year starts from April to March
+                The School got affiliated to CBSE upto +2 level in 1993.</p>
+                </mat-card-content>
+              </mat-card>              
+          </mat-tab>
+
+<!--  -->          
+        </mat-tab-group>
+    </mat-card>
+<!--  -->
+    <mat-card class="school-main-side">Simple card</mat-card>
+
+  </div>
+</div>

@@ -47,6 +47,7 @@ import { MatBadgeModule } from "@angular/material/badge";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { MatListModule } from "@angular/material/list";
 // for HttpClient import:
 import { LoadingBarHttpClientModule } from "@ngx-loading-bar/http-client";
 // for Router import:
@@ -58,6 +59,8 @@ import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { SchoolComponent } from "../../pages/school/school.component";
 import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.component";
+
+import { NgxGalleryModule } from "ngx-gallery-9";
 
 @NgModule({
   declarations: [
@@ -97,6 +100,7 @@ import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.com
     MatExpansionModule,
     MatProgressBarModule,
     MatChipsModule,
+    MatListModule,
     FlexLayoutModule,
     ScrollingModule,
     FormsModule,
@@ -106,6 +110,7 @@ import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.com
     LoadingBarRouterModule,
     LoadingBarModule,
     InfiniteScrollModule,
+    NgxGalleryModule,
   ],
 })
 export class DefaultModule {}

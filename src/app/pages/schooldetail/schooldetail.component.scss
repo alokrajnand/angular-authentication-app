@@ -1,0 +1,172 @@
+.header {
+  height: 100px;
+}
+
+.mat-toolbar-row {
+  background-color: #fff;
+  padding: 50px;
+  box-shadow: 1px 1px 2px 1px #888888 !important;
+}
+.header-row .material-icons {
+  font-size: 40px;
+  background-color: #f4f5fd;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 1px #888888 !important;
+  padding: 10px;
+}
+
+.logo {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.heading {
+  font-size: 22px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.subheading {
+  font-size: 15px;
+  margin-top: 0px;
+  padding-top: 0px;
+  text-decoration: none;
+  color: #878dbb;
+}
+
+.container {
+  margin: 15px;
+}
+
+.card-footer-link {
+  padding: 10px;
+}
+.share-card {
+  float: right;
+}
+
+/*****  *****/
+
+.school-container {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 0px;
+}
+
+.school-banner {
+  width: 100%;
+  margin: 0px !important;
+  padding: 0px !important;
+  background-image: linear-gradient(-20deg, #2b5876, #4e4376) !important;
+}
+
+.school-card-container {
+  width: 45%;
+  margin: 0px !important;
+  padding: 0px !important;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.school-card {
+  margin: 0 auto !important;
+  text-align: center !important;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0px;
+  color: white;
+}
+.school-card-pi {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+  padding: 2px;
+  border: 1px solid greenyellow;
+}
+
+.mat-card-sb-image {
+  width: 60%;
+  object-fit: cover !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 400px !important;
+}
+
+.school-badge {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.school-badge mat-card {
+  width: 20%;
+  background-image: linear-gradient(90deg, #141e30, #243b55) !important;
+  color: white;
+}
+
+.school-main {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.school-main .school-main-content {
+  width: 76%;
+  padding: 0px;
+}
+
+.school-main .school-main-side {
+  width: 20%;
+}
+.about-container {
+  padding: 10px;
+}
+.about-general-info {
+  margin-bottom: 20px;
+}
+.about-other-desc {
+}
+
+.test1 {
+  width: 45%;
+  padding: 20px;
+}
+
+.gi-row {
+  margin-bottom: 20px;
+}
+
+.gi-row-info {
+  float: left;
+  margin-left: 15px;
+}
+.list-card {
+  border-radius: 0px !important;
+  background-image: linear-gradient(90deg, #141e30, #243b55) !important;
+  color: white !important;
+}
+
+.school-about {
+  padding: 20px !important;
+}
+.Facilities-container {
+  padding: 20px;
+  width: 100%;
+}
+.facilities-card {
+  width: 20%;
+  margin-bottom: 15px;
+}
+
+.gallery-container {
+  padding: 20px;
+  width: 100%;
+}
+
+.gallery-img {
+  width: 24.8%;
+  margin-bottom: 3px;
+}
+
+.gallery-container {
+  padding: 20px;
+}
