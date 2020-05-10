@@ -1,10 +1,14 @@
-<mat-toolbar class="header">
-  <mat-toolbar-row class="header-row">
-    <span class="material-icons">book</span>
+<!-- subheading structure start-->
+
+<mat-toolbar class="header-nav">
+  <mat-toolbar-row class="header-nav-row">
+    <span class="material-icons ">book</span>
     <span class= "logo">  
-      <h2 class="heading">Courses</h2>
-      <p class="subheading">All the beautifull and informatic Courses </p>
-    </span>
+      <h2 class="heading"> Courses</h2>
+      <p class="subheading">Find all the courses on this platform </p>
+    </span> 
+
+<!--Search component  will gets implemented after some time
 
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
       <ul fxLayout="row" fxLayoutGap="20px">
@@ -24,30 +28,28 @@
           </form>
       </ul>
     </div>
+
+-->
   </mat-toolbar-row>
 </mat-toolbar>
-
-
+<!-- subheading structure Ends-->
+<!--- Courses structure starts-->
 <div class="card-container">
 <div class="card-box">
-
-
     <div *ngFor="let course of courses">
         <mat-card class="list-card">
           <img mat-card-image class="post-card-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-          <mat-card-title class="card-title">{{course.title}}</mat-card-title>
-          <mat-card-subtitle>Author - Dog Breed</mat-card-subtitle>
+          <mat-card-title class="card-title">{{course.course_name}}</mat-card-title>
+          <mat-card-subtitle>Author - {{course.course_author}}</mat-card-subtitle>
           <mat-card-content>
-          <p>{{course.body}}</p>
+          <p>{{course.course_short_desc}}</p>
           </mat-card-content>
-          
           <mat-card-actions>
-            <button class="post-card-button" mat-stroked-button  color="accent">Read Here</button>
+            <button class="post-card-button" mat-stroked-button routerLink="{{course.course_header}}" color="accent">Read Here</button>
           </mat-card-actions>
         </mat-card>
     </div>
-
-
-
 </div>
 </div>
+
+<!--- Courses structure Ends-->

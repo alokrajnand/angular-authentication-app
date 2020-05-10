@@ -1,34 +1,55 @@
 .banner {
   width: 100%;
   margin: 0 auto;
-  background-image: linear-gradient(to right, red, yellow);
 }
 
-.Post-header {
-  width: 50%;
-}
-.post-header-category-name {
-  font-size: 30px;
-  font-weight: 700;
-  padding-bottom: 20px;
-  border-bottom: 5px solid green;
-}
-.post-header-content {
-  padding: 50px;
+.banner-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.post-banner-image {
-  width: 50%;
+.banner-box {
+  width: 100%;
 }
-.post-banner-image-content {
-  padding: 50px;
+.banner-card {
+  box-shadow: none !important;
+  border-radius: 0px;
+  padding-bottom: 5px !important;
+}
+.course-heading {
+  font-weight: 700 !important;
+  line-height: 1.2;
+  display: block;
+  font-size: 1.3em;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+.course-date {
+  font-weight: 500 !important;
+}
+.banner-course-author {
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  display: block;
+  font-size: 0.9em;
 }
 
-.post-banner-image-content .mat-card-image {
-  border-radius: 5px;
+.banner-course-author-desc {
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  display: block;
+  font-size: 0.9em;
+}
+
+.course-article {
+  display: block;
 }
 
 /* about the course*/
+.course-container {
+  width: 100% !important;
+  margin: 0 auto;
+}
 
 .point-video {
   width: 20%;
@@ -41,24 +62,25 @@
   text-align: center;
 }
 
-.course-detail-container {
-  width: 90% !important;
-  margin: 0 auto;
-}
+/* *** Course review container style** ***/
 
 .course-review-container {
 }
 
 .review-block {
-  width: 48%;
-  margin-bottom: 50px;
+  width: 98%;
+  margin-bottom: 15px;
 }
 
 .course-review-title {
 }
 
 .course-review-heading {
-  margin: 50px 0px;
+  margin: 15px 0px;
+  font-weight: 700 !important;
+  line-height: 1.2;
+  display: block;
+  font-size: 1.1em;
 }
 .course-review-pb {
   margin: 10px;
@@ -69,4 +91,67 @@
 }
 .review-comment-header {
   padding-top: 20px !important;
+}
+
+@media only screen and (min-width: 400px) {
+}
+@media only screen and (min-width: 700px) {
+}
+@media only screen and (min-width: 1000px) {
+  .banner {
+    width: 100%;
+    margin: 0 auto;
+    background-color: cadetblue;
+  }
+
+  .banner-container {
+    width: 85%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-box {
+    width: 50%;
+  }
+
+  .banner-card {
+    background: transparent;
+  }
+
+  .banner-box-img {
+    width: 89%;
+    margin: 50px;
+    border-radius: 15px !important;
+  }
+
+  .course-heading {
+    font-size: 2.3em;
+    margin-bottom: 15px;
+  }
+
+  .banner-course-author {
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    font-size: 1.3em;
+  }
+
+  .course-banner-avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .course-container {
+    width: 84% !important;
+    margin: 0 auto;
+  }
+  .review-block {
+    width: 48%;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+}
+@media only screen and (min-width: 2500px) {
 }

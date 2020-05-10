@@ -3,6 +3,7 @@ import { PostService } from "src/app/_services/post.service";
 import { PostModel } from "src/app/_models/post.model";
 import { CourseService } from "src/app/_services/course.service";
 import { CourseModel } from "src/app/_models/course.model";
+import { UsersService } from "src/app/_services/users.service";
 
 export interface Tile {
   color: string;
@@ -19,7 +20,8 @@ export class HomeComponent implements OnInit {
   courses: CourseModel[] = [];
   constructor(
     private _PostService: PostService,
-    private _CourseService: CourseService
+    private _CourseService: CourseService,
+    private _UsersService: UsersService
   ) {}
 
   ngOnInit(): void {
@@ -33,6 +35,7 @@ export class HomeComponent implements OnInit {
     this._CourseService.getAllCourses().subscribe((data: any) => {
       this.courses = data;
       console.log(data);
+      console.log(this._UsersService.getuser());
     });
   }
 }

@@ -1,59 +1,15 @@
-.header {
-  height: 100px;
+.card-container {
+  width: 98%;
+  margin: 0 auto;
 }
 
-.mat-toolbar-row {
-  background-color: #fff;
-  padding: 50px;
-  box-shadow: 1px 1px 2px 1px #888888 !important;
+@media only screen and (min-width: 400px) {
 }
-.header-row .material-icons {
-  font-size: 40px;
-  background-color: #f4f5fd;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px 1px #888888 !important;
-  padding: 10px;
+@media only screen and (min-width: 700px) {
 }
-
-.logo {
-  margin-top: 15px;
-  margin-left: 20px;
+@media only screen and (min-width: 1000px) {
 }
-.heading {
-  font-size: 22px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+@media only screen and (min-width: 1400px) {
 }
-
-.subheading {
-  font-size: 15px;
-  margin-top: 0px;
-  padding-top: 0px;
-  text-decoration: none;
-  color: #878dbb;
-}
-
-.container {
-  margin: 15px;
-}
-
-.mat-card {
-  margin-bottom: 10px;
-  border-radius: 0px;
-  padding-bottom: 3px;
-}
-.card-footer-link {
-  padding: 10px;
-}
-.share-card {
-  float: right;
-}
-
-.header-row .cat-dd {
-  font-size: 14px;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-.mat-form-field {
-  border-bottom: none;
+@media only screen and (min-width: 2500px) {
 }

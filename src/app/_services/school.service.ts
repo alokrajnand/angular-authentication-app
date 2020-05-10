@@ -1,5 +1,10 @@
 import { Injectable } from "@angular/core";
-import { SchoolModel } from "../_models/school.model";
+import {
+  SchoolModel,
+  SchoolFeeModel,
+  SchoolFacilityModel,
+  SchoolGalleryModel,
+} from "../_models/school.model";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
@@ -17,5 +22,21 @@ export class SchoolService {
 
   getschooldetail(name: String): Observable<SchoolModel> {
     return this.http.get<SchoolModel>(this.base_school_url + name);
+  }
+
+  getallschoolfee(name: String): Observable<SchoolFeeModel> {
+    return this.http.get<SchoolFeeModel>(this.base_school_url + "fee/" + name);
+  }
+
+  getallschoolfacility(name: String): Observable<SchoolFacilityModel> {
+    return this.http.get<SchoolFacilityModel>(
+      this.base_school_url + "facilities/" + name
+    );
+  }
+
+  getallschoolGallery(name: String): Observable<SchoolGalleryModel> {
+    return this.http.get<SchoolGalleryModel>(
+      this.base_school_url + "gallery/" + name
+    );
   }
 }

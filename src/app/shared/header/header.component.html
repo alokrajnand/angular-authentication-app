@@ -9,40 +9,54 @@
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
         <ul fxLayout="row" fxLayoutGap="20px">
           <!-- If the device is extra Small -->      
-                <div *ngIf="deviceXs"> 
-                  <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>settings</mat-icon></button>
-                    <mat-menu #menu="matMenu">
-                      <mat-nav-list>
-                        <a mat-list-item *ngIf="!_UsersService.loggedIn()" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</a>
-                        <a mat-list-item *ngIf="!_UsersService.loggedIn()" routerLinkActive="list-item-active" routerLink="/signin">Sign In</a>
-                        <a mat-list-item *ngIf="_UsersService.loggedIn()"  routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</a> 
-                     </mat-nav-list>     
-                    </mat-menu> 
-                </div>
+                <div *ngIf="deviceXs || deviceSm"> 
 
-          <!-- If the device is tablet Sm -->      
-                <div *ngIf="deviceSm"> 
-                        <button *ngIf="!_UsersService.loggedIn()" mat-button color="primary" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>
-                        <button *ngIf="!_UsersService.loggedIn()" mat-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Sign In</button>
-                        <button *ngIf="_UsersService.loggedIn()" mat-button color="primary" routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</button> 
-                </div>
+                    <button class="header-icon-button" mat-icon-button  color="test" [matMenuTriggerFor]="apps"><mat-icon>apps</mat-icon></button>
+                      <mat-menu  class="header-app" #apps="matMenu" >
+                         <mat-toolbar> APPS </mat-toolbar>                   
+                         <button mat-menu-item routerLink="" [state]="{ ignoreLoadingBar: true }"><mat-icon>home</mat-icon> home </button>
+                         <button mat-menu-item routerLink="/posts" [state]="{ ignoreLoadingBar: true }"><mat-icon>description</mat-icon> Posts </button>
+                         <button mat-menu-item routerLink="/schools" [state]="{ ignoreLoadingBar: true }"><mat-icon>school</mat-icon> School</button>
+                         <button mat-menu-item routerLink="/courses" [state]="{ ignoreLoadingBar: true }"><mat-icon>book</mat-icon> Courses</button>     
+                         <button mat-menu-item *ngIf="_UsersService.loggedIn()" ><mat-icon>dashboard</mat-icon> Dashboard</button>                         
+                    </mat-menu>   
+
+
+
+                  <button *ngIf="!_UsersService.loggedIn()"mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>account_box</mat-icon></button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item  routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>
+                        <button mat-menu-item  routerLinkActive="list-item-active" routerLink="/signin">Sign In</button>
+                    </mat-menu>                  
+                
+
+                <button *ngIf="_UsersService.loggedIn()"mat-icon-button [matMenuTriggerFor]="menulogedin"><mat-icon>account_box</mat-icon></button>
+                  <mat-menu #menulogedin="matMenu">
+                    <mat-toolbar> User Info </mat-toolbar>  
+                    <button mat-menu-item routerLinkActive="list-item-active" routerLink="/profile">Profile</button>
+                    <button mat-menu-item   routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</button>   
+                </mat-menu> 
+            </div>
+
           <!-- If the device is Large laptop and bigger than laptop -->      
                 <div *ngIf="deviceMd || deviceLg || deviceXl"> 
-                        <button  class="header-icon-button" mat-icon-button color="test" routerLink=""><mat-icon>home</mat-icon></button>
-                        <button  class="header-icon-button" mat-icon-button color="test" routerLink="/schools"><mat-icon>school</mat-icon></button>
-                        <button  class="header-icon-button" mat-icon-button color="test" routerLink="/courses"><mat-icon>book</mat-icon></button>     
-                        <button  class="header-icon-button" mat-icon-button color="test" routerLink="/posts"><mat-icon>description</mat-icon></button>                                                 
-                        <button *ngIf="_UsersService.loggedIn()" class="header-icon-button" mat-icon-button color="test" ><mat-icon>dashboard</mat-icon></button>
+                        <button class="header-icon-button" mat-icon-button  color="test" [matMenuTriggerFor]="apps"><mat-icon>apps</mat-icon></button>
+                          <mat-menu  class="header-app" #apps="matMenu" >
+                              <mat-toolbar> APPS </mat-toolbar> 
+                              <button mat-menu-item routerLink="" [state]="{ ignoreLoadingBar: true }"><mat-icon>home</mat-icon> home </button>                  
+                              <button mat-menu-item routerLink="/posts" [state]="{ ignoreLoadingBar: true }"><mat-icon>description</mat-icon> Posts </button>
+                              <button mat-menu-item routerLink="/schools" [state]="{ ignoreLoadingBar: true }"><mat-icon>school</mat-icon> School</button>
+                              <button mat-menu-item routerLink="/courses" [state]="{ ignoreLoadingBar: true }"><mat-icon>book</mat-icon> Courses</button>     
+                              <button mat-menu-item *ngIf="_UsersService.loggedIn()" ><mat-icon>dashboard</mat-icon> Dashboard</button>                         
+                        </mat-menu>   
                         
                         <button *ngIf="!_UsersService.loggedIn()" mat-button color="primary" routerLinkActive="list-item-active" routerLink="/signup">Sign Up</button>
-                        <button *ngIf="!_UsersService.loggedIn()" mat-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Sign In</button>                  
-                        
-                        <button *ngIf="_UsersService.loggedIn()" class="header-icon-button" mat-button color="primary" [matMenuTriggerFor]="menu"><img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg"> <mat-icon>arrow_drop_down</mat-icon></button>
+                        <button *ngIf="!_UsersService.loggedIn()" mat-button color="primary" routerLinkActive="list-item-active" routerLink="/signin">Sign In</button>                                        
+                        <button *ngIf="_UsersService.loggedIn()" class="header-icon-button"  routerLinkActive="list-item-active" mat-button color="primary" [matMenuTriggerFor]="menu"><img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg"> <mat-icon>arrow_drop_down</mat-icon></button>
                           <mat-menu #menu="matMenu">
-                            <mat-nav-list>
-                              <a mat-list-item *ngIf="_UsersService.loggedIn()" routerLinkActive="list-item-active" routerLink="/Profile">Profile</a>
-                              <a mat-list-item *ngIf="_UsersService.loggedIn()"  routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</a> 
-                          </mat-nav-list>     
+                              <mat-toolbar> User Info </mat-toolbar>  
+                              <button mat-menu-item *ngIf="_UsersService.loggedIn()" routerLinkActive="list-item-active" routerLink="/profile">Profile</button>
+                              <button mat-menu-item *ngIf="_UsersService.loggedIn()"  routerLinkActive="list-item-active" (click) ="_UsersService.logout()">Log Out</button>   
                           </mat-menu> 
                 </div>
 

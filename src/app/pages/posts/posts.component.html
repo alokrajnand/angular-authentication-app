@@ -1,11 +1,14 @@
-<mat-toolbar class="header">
-  <mat-toolbar-row class="header-row">
-    <span class="material-icons ">description</span>
-    <span class= "logo">  
-      <h2 class="heading">Posts</h2>
-      <p class="subheading">All the beautifull and informatic posts </p>
-    </span>
+<!-- school subheading structure start-->
 
+<mat-toolbar class="header-nav">
+  <mat-toolbar-row class="header-nav-row">
+    <span class="material-icons ">school</span>
+    <span class= "logo">  
+      <h2 class="heading"> Post </h2>
+      <p class="subheading"> All the intresting and informatic article on the platform </p>
+    </span> 
+
+<!--- this will be implemented after some time
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
       <ul fxLayout="row" fxLayoutGap="20px">
           <div class="cat-dd">
@@ -21,13 +24,12 @@
           </div>
       </ul>
     </div>
-
-
-
+  
+  -->
   </mat-toolbar-row>
 </mat-toolbar>
 
-
+<!--- posts card structure start-->
 
 
 <div class="card-container">
@@ -35,14 +37,15 @@
     <div *ngFor="let post of posts">
         <mat-card class="list-card">
           <img mat-card-image class="post-card-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-          <mat-card-title class="card-title">{{post.post_id}}</mat-card-title>
-          <mat-card-subtitle>Author - Dog Breed</mat-card-subtitle>
+          <mat-card-title class="card-title">{{post.post_name}}</mat-card-title>
+          <mat-card-subtitle>Author - {{post.post_author}}</mat-card-subtitle>
           <mat-card-content>
-          <p>{{post.post_id}}</p>
+          
+          <p innerHTML="{{post.post_short_desc}}"></p>
           </mat-card-content>
           
           <mat-card-actions>
-            <button class="post-card-button" mat-stroked-button  color="accent">Read Here</button>
+            <button class="post-card-button" mat-stroked-button  color="accent" routerLink="{{post.post_header}}" [state]="{ ignoreLoadingBar: true }" >Read Here</button>
           </mat-card-actions>
         </mat-card>
       </div>
@@ -50,3 +53,4 @@
 </div>
 
 
+<!--- posts card structure Ends-->

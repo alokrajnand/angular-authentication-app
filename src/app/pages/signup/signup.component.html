@@ -2,17 +2,15 @@
 <div class="auth-backgroud">
 <div class="auth-container">  
 <div class="auth-center-container">
-    
+  <mat-toolbar><span>Sign up</span></mat-toolbar>
+  
   <mat-card>
-        <mat-toolbar>
-            <span>Sign up</span>
-        </mat-toolbar>
 
     <mat-card-content>
 
-          <form class="example-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+          <form class="signup-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
             
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="signup-form-field">
               <mat-label>User Name</mat-label>
               <input matInput placeholder="User Name" value="User name" formControlName="username" required>
               <mat-hint>User Name</mat-hint>
@@ -21,7 +19,7 @@
             </mat-form-field>
 
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="signup-form-field">
               <mat-label>Phone Number</mat-label>
               <input matInput placeholder="Phone Number" value="Phone Number" formControlName="phone_number" required>
               <mat-hint>Phone Number</mat-hint>
@@ -29,7 +27,7 @@
             </mat-form-field>
       
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="signup-form-field">
               <mat-label>name</mat-label>
               <input matInput placeholder="Name" value="Name" formControlName="name" required>
               <mat-hint> Name </mat-hint>
@@ -37,7 +35,7 @@
             </mat-form-field>
 
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="signup-form-field">
               <mat-label>Email Address</mat-label>
               <input matInput placeholder="Email Address" value="Email Address" formControlName="email_address" required>
               <mat-hint> Email Address </mat-hint>
@@ -46,7 +44,7 @@
 
 
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="signup-form-field">
               <mat-label>Date of Birth</mat-label>
               <input matInput placeholder="Date of Birth" value="Date of Birth" formControlName="date_of_birth" required>
               <mat-hint> Date of Birth </mat-hint>
@@ -54,23 +52,21 @@
             </mat-form-field>
 
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="signup-form-field">
               <mat-label>Password</mat-label>
               <input matInput placeholder="Password" value="Password" formControlName="password" required>
               <mat-hint> Password </mat-hint>
               <mat-error>Please enter a password</mat-error>
             </mat-form-field>
 
-        <button mat-raised-button color="primary" style="width: 100%; display: block;">Submit</button> 
+        <button class="signup-button" mat-raised-button color="primary" style="width: 100%; display: block;">Submit</button> 
       </form>
             
     </mat-card-content>
 
-    <div class="margin-top-50"></div>
-    <div class="margin-top-50"></div>
     <mat-divider></mat-divider>  
     <div style="padding-top: 15px;"></div>
-    <p>All ready have account login : <a routerLinkActive="list-item-active" routerLink="/signin">Login</a></p>
+    <button class="signup-button" mat-raised-button color="primary" style="width: 100%; display: block;" routerLink="/signin">All ready have account - Login</button> 
     
   </mat-card>
 </div>

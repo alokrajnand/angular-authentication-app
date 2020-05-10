@@ -49,6 +49,7 @@ export class SigninComponent implements OnInit {
         (response: any) => {
           console.log(response);
           localStorage.setItem("token", response.token);
+          localStorage.setItem("name", response.name);
           this._Router.navigate(["/dashboard"]);
         },
         (error) => (this.errorMsg = error)

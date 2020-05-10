@@ -3,9 +3,12 @@
  ***********************************8*/
 
 export class PostModel {
-  post_id: String;
+  id: String;
+  post_name: String;
   post_header: String;
-  post_content: String;
   post_author: String;
-  post_created_date: Date;
+  post_short_desc: String;
+  post_content: String;
+  post_created_dt: Date;
+  post_updated_dt: Date;
 }

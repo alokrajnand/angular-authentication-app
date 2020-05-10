@@ -1,10 +1,16 @@
-<mat-toolbar class="header">
-  <mat-toolbar-row class="header-row">
-    <span class="material-icons">school</span>
+<!-- school detail subheading structure start-->
+
+<mat-toolbar class="header-nav">
+  <mat-toolbar-row class="header-nav-row">
+    <span class="material-icons ">school</span>
     <span class= "logo">  
-      <h2 class="heading">Schools</h2>
-      <p class="subheading">List of all School</p>
-    </span>
+      <h2 class="heading"> School Name</h2>
+      <p class="subheading"> School Tag Line </p>
+    </span> 
+
+<!-- school detail subheading structure End-->
+
+<!-- 
 
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
       <ul fxLayout="row" fxLayoutGap="20px">
@@ -24,49 +30,59 @@
           </form>
       </ul>
     </div>
+
+    -->
   </mat-toolbar-row>
 </mat-toolbar>
 
 
+<!-- school detail  banner  structure Start -->
 <div class="school-container">
   <mat-card class="school-banner" fxLayout="row" fxLayoutAlign="space-between center" >   
         <div class="school-card-container">
               <mat-card class="school-card">
                   <img class="school-card-pi"  mat-card-avatar  src="https://material.angular.io/assets/img/examples/shiba2.jpg"  >
                   <mat-card-title>{{schooldetail.school_Name}}</mat-card-title>
-                  <mat-card-subtitle>Kankarbag | Patna | Bihar </mat-card-subtitle>
+                  <mat-card-subtitle>{{schooldetail.school_location}} | {{schooldetail.school_city}} | {{schooldetail.school_state}} </mat-card-subtitle>
                 <mat-card-actions>
 
                 </mat-card-actions>
               </mat-card>
         </div>
-        <img class="mat-card-sb-image"  src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-
+        
+        <img *ngIf="deviceMd || deviceLg || deviceXl" 
+          class="mat-card-sb-image"  src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        
   </mat-card>
-<!--   -->
-  <div class="school-badge" fxLayout="row" fxLayoutAlign="space-between center" >  
+
+<!-- school detail  banner  structure End -->
+
+<!-- school detail school key  structure start -->
+  <div class="school-badge" fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" >  
     <mat-card>
       <span class="material-icons">wc</span>
-      <h2> Co-Eucation</h2>
+      <h2> {{schooldetail.school_type}}</h2>
     </mat-card>
     <mat-card>
       <span class="material-icons">security</span>
-      <h2> Board - CBSC</h2>
+      <h2> Board - {{schooldetail.school_board}}</h2>  
     </mat-card>
     <mat-card>
       <span class="material-icons">text_format</span>
-      <h2> Medium - English</h2>
+      <h2> Medium - {{schooldetail.school_medium}}</h2>
     </mat-card>
     <mat-card>      
       <span class="material-icons">account_balance</span>
-      <h2> Type - Private</h2>
+      <h2> Type - {{schooldetail.school_owned_by}}</h2>
     </mat-card>
   </div>
 
-<!---    -->
+<!-- school detail school key  structure End -->
+
+<!-- school detail main content  structure start -->
   <div class="school-main" fxLayout="row" fxLayoutAlign="space-between start" >  
     <mat-card class="school-main-content">
-        <mat-tab-group mat-stretch-tabs>
+        <mat-tab-group mat-stretch-tabs>         
           <mat-tab label="About">          
           <div class="about-container">
 
@@ -76,116 +92,60 @@
                   <mat-divider></mat-divider>
                 
                 <mat-card-content>
-                  <div class="" fxLayout="row" fxLayoutAlign="space-between  none" >                
-                    <div class="test1">
+                  <div class="" fxLayout="row wrap" fxLayoutAlign="space-between  none" >                
+                    <div class="gi-row-container">
                         <div fxLayout="column" fxLayoutAlign="start start">
                                 <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
                                     <span class="material-icons">location_on</span>
-                                    <span class="gi-row-info">Address : Community Hall, Patna Central School Road Opp. Maurya Bihar, Jaganpura, Sudarshan Vihar, Patna, Bihar 800027</span>
+                                    <span class="gi-row-info">Address : {{schooldetail.school_address}}</span>
                                 </div>
                                 
                                 <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
                                     <span class="material-icons">smartphone</span>
-                                    <span class="gi-row-info">Phone : +91 8790423334 , +91 4082308874</span>
+                                    <span class="gi-row-info">Phone : {{schooldetail.school_phone_number}}</span>
                                 </div>   
 
                                 <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
                                     <span class="material-icons">cake</span>
-                                    <span class="gi-row-info">Foundation Date : 02-02-1987</span>
+                                    <span class="gi-row-info">Foundation Date : {{schooldetail.school_start_date}}</span>
                                 </div>  
                         </div>
                     </div>
-                    <div class="test1">
+                    <div class="gi-row-container">
                         <div fxLayout="column" fxLayoutAlign="start start">
                                 <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
                                     <span class="material-icons">mail</span>
-                                    <span class="gi-row-info"> Email : admin@nanduniversity.com </span>
+                                    <span class="gi-row-info"> Email : {{schooldetail.school_mailing_address}} </span>
                                 </div>
                                 
                                 <div class="gi-row" fxLayout="row" fxLayoutAlign="start start">
                                     <span class="material-icons">public</span>
-                                    <span class="gi-row-info"> Website : nanduniverssity.com</span>
+                                    <span class="gi-row-info"> Website : {{schooldetail.school_website_url}}</span>
                                 </div>                    
                         </div>                                     
-                    </div>
-                  
-                  
+                    </div>                 
                   </div>
                 </mat-card-content>
               </mat-card>                  
-          
-
-
 <!----   -->
-
-
               <mat-card class="about-other-desc">
                   <mat-card-title> About </mat-card-title>
                   <mat-divider></mat-divider>
                 <mat-card-content class="school-about">
-                <p>Acharya Sudarshan Patna Central School Patna, is a Senior Secondary School (XI-XII), affiliated to Central Board of Secondary Education (CBSE). The School is a Coed Day Cum Boarding School, with classes from Nursery to XII. It is an English Medium school. The school is located in Patna. Acharya Sudarshan Patna Central School was established in 1980. It is a Trust and is part of Acharya Sudarshan Patna central school and is managed by .
-Acharya Sudarshan Patna Central School is a Coed Day Cum Boarding School, which services the educational need of over NA students from Nursery through XII. The classes in Acharya Sudarshan Patna Central School for every academic year starts from April to March
-The School got affiliated to CBSE upto +2 level in 1993.</p>
-
-                <p>Acharya Sudarshan Patna Central School Patna, is a Senior Secondary School (XI-XII), affiliated to Central Board of Secondary Education (CBSE). The School is a Coed Day Cum Boarding School, with classes from Nursery to XII. It is an English Medium school. The school is located in Patna. Acharya Sudarshan Patna Central School was established in 1980. It is a Trust and is part of Acharya Sudarshan Patna central school and is managed by .
-Acharya Sudarshan Patna Central School is a Coed Day Cum Boarding School, which services the educational need of over NA students from Nursery through XII. The classes in Acharya Sudarshan Patna Central School for every academic year starts from April to March
-The School got affiliated to CBSE upto +2 level in 1993.</p>
-
-
+                    {{schooldetail.school_about}}
                 </mat-card-content>
-              </mat-card>             
-          
-          
-          
+              </mat-card>                     
           </div>
           </mat-tab>
-<!-----   -->
-
+<!-----  School About tab end here and school fee stracture tab start here -->
           <mat-tab label="Fee Structure">
           <div class="Facilities-container" fxLayout="row wrap" fxLayoutAlign="space-between start" >  
-                <mat-card class="facilities-card">
-                  <span class="material-icons">wc</span>
-                  <h2> Co-Eucation</h2>
-                </mat-card>
-                <mat-card class="facilities-card">
-                  <span class="material-icons">security</span>
-                  <h2> Board - CBSC</h2>
-                </mat-card>
-                <mat-card class="facilities-card">
-                  <span class="material-icons">text_format</span>
-                  <h2> Medium - English</h2>
-                </mat-card>
-                <mat-card class="facilities-card">      
-                  <span class="material-icons">account_balance</span>
-                  <h2> Type - Private</h2>
-                </mat-card>
-                 <mat-card class="facilities-card">
-                  <span class="material-icons">security</span>
-                  <h2> Board - CBSC</h2>
-                </mat-card>
-                <mat-card class="facilities-card">
-                  <span class="material-icons">text_format</span>
-                  <h2> Medium - English</h2>
-                </mat-card>
-                <mat-card class="facilities-card">      
-                  <span class="material-icons">account_balance</span>
-                  <h2> Type - Private</h2>
-                </mat-card>         
-                <mat-card class="facilities-card">      
-                  <span class="material-icons">account_balance</span>
-                  <h2> Type - Private</h2>
-                </mat-card>               
-                <mat-card class="facilities-card">      
-                  <span class="material-icons">account_balance</span>
-                  <h2> Type - Private</h2>
-                </mat-card>            
-          
-          </div>
-
-  
-              
+                <mat-card class="facilities-card" *ngFor="let schoolfee of schoolfeedetail">
+                  <span>Grade - {{schoolfee.grade}}</span>
+                  <h2> Fee/Month - {{schoolfee.grade_fee}}</h2>
+                </mat-card>      
+          </div>            
           </mat-tab>
-
 <!-----   -->          
           <mat-tab label="Gallary"> 
           <div class="gallery-container">
@@ -194,42 +154,51 @@ The School got affiliated to CBSE upto +2 level in 1993.</p>
           </mat-tab>
 <!-----   -->          
           <mat-tab label="Facilities"> 
-               <div class="Facilities-container" fxLayout="row wrap" fxLayoutGap="2px" fxLayoutAlign="start" >  
+               <div class="Facilities-container" fxLayout="row wrap" fxLayoutGap="1%" fxLayoutAlign="start" >  
                 <mat-card class="facilities-card">
                   <span class="material-icons">wc</span>
-                  <h2> Co-Eucation</h2>
+                  <h2 class="facilities-type"> Outdoor Play Ground</h2>
+                  <p class="facilities-y"> Yes </p>
                 </mat-card>
                 <mat-card class="facilities-card">
                   <span class="material-icons">security</span>
-                  <h2> Board - CBSC</h2>
+                  <h2 class="facilities-type"> Tennis Court</h2>
+                  <p class="facilities-n"> No </p>
                 </mat-card>
                 <mat-card class="facilities-card">
-                  <span class="material-icons">text_format</span>
-                  <h2> Medium - English</h2>
+                  <span class="material-icons">security</span>
+                  <h2 class="facilities-type"> Bedminton Court</h2>
+                  <p class="facilities-n"> No </p>
                 </mat-card>
                 <mat-card class="facilities-card">      
-                  <span class="material-icons">account_balance</span>
-                  <h2> Type - Private</h2>
+                  <span class="material-icons">pool</span>
+                  <h2 class="facilities-type"> Swimming Pool</h2>
+                  <p class="facilities-n"> No </p>
                 </mat-card>
                  <mat-card class="facilities-card">
-                  <span class="material-icons">security</span>
-                  <h2> Board - CBSC</h2>
+                  <span class="material-icons">local_library</span>
+                  <h2 class="facilities-type"> Library </h2>
+                  <p class="facilities-n"> No </p>
                 </mat-card>
                 <mat-card class="facilities-card">
                   <span class="material-icons">text_format</span>
-                  <h2> Medium - English</h2>
+                  <h2 class="facilities-type"> Auditorium</h2>
+                  <p class="facilities-n"> No </p>
                 </mat-card>
                 <mat-card class="facilities-card">      
-                  <span class="material-icons">account_balance</span>
-                  <h2> Type - Private</h2>
+                  <span class="material-icons">queue_music</span>
+                  <h2 class="facilities-type"> Music Class</h2>
+                  <p class="facilities-n"> No </p>
                 </mat-card>         
                 <mat-card class="facilities-card">      
-                  <span class="material-icons">account_balance</span>
-                  <h2> Type - Private</h2>
+                  <span class="material-icons">movie_creation</span>
+                  <h2 class="facilities-type"> Drama Class</h2>
+                  <p class="facilities-n"> No </p>
                 </mat-card>               
                 <mat-card class="facilities-card">      
                   <span class="material-icons">account_balance</span>
-                  <h2> Type - Private</h2>
+                  <h2 class="facilities-type"> Type - Private</h2>
+                  <p class="facilities-n"> No </p>
                 </mat-card>            
           
           </div>         
@@ -256,7 +225,7 @@ The School got affiliated to CBSE upto +2 level in 1993.</p>
         </mat-tab-group>
     </mat-card>
 <!--  -->
-    <mat-card class="school-main-side">Simple card</mat-card>
+    <mat-card  *ngIf="deviceMd || deviceLg || deviceXl"  class="school-main-side">Simple card</mat-card>
 
   </div>
 </div>

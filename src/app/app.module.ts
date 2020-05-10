@@ -8,6 +8,7 @@ import { AuthGuard } from "./_authguard/auth.guard";
 import { SchoolComponent } from "./pages/school/school.component";
 import { SchooldetailComponent } from "./pages/schooldetail/schooldetail.component";
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [

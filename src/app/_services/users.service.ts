@@ -8,10 +8,6 @@ import { Router } from "@angular/router";
 @Injectable({
   providedIn: "root",
 })
-
-
-
-
 export class UsersService {
   constructor(private http: HttpClient, private _Router: Router) {}
 
@@ -37,6 +33,11 @@ export class UsersService {
 
   loggedIn() {
     return !!localStorage.getItem("token");
+  }
+
+  //get user name information
+  getuser() {
+    return localStorage.getItem("name");
   }
 
   errorHandler(error: HttpErrorResponse) {

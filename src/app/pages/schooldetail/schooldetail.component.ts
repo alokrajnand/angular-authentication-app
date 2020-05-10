@@ -6,6 +6,13 @@ import {
   NgxGalleryAnimation,
 } from "ngx-gallery-9";
 import { SchoolService } from "src/app/_services/school.service";
+import {
+  SchoolFeeModel,
+  SchoolGalleryModel,
+  SchoolFacilityModel,
+} from "src/app/_models/school.model";
+import { MediaObserver, MediaChange } from "@angular/flex-layout";
+import { Subscription } from "rxjs";
 
 @Component({
   selector: "app-schooldetail",
@@ -14,14 +21,26 @@ import { SchoolService } from "src/app/_services/school.service";
 })
 export class SchooldetailComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[];
-  galleryImages: NgxGalleryImage[];
+  schoolgallery: NgxGalleryImage[];
 
   name = "";
   schooldetail: any = "";
+  schoolfeedetail: SchoolFeeModel[] = [];
+  galleryImages: SchoolGalleryModel[] = [];
+  schoolfacility: any = "";
+
+  /*  variable for screen size */
+  deviceXs: boolean;
+  deviceSm: boolean;
+  deviceMd: boolean;
+  deviceLg: boolean;
+  deviceXl: boolean;
+  medisub: Subscription;
 
   constructor(
     private _ActivatedRoute: ActivatedRoute,
-    private _SchoolService: SchoolService
+    private _SchoolService: SchoolService,
+    public _MediaObserver: MediaObserver
   ) {}
 
   ngOnInit(): void {
@@ -34,7 +53,34 @@ export class SchooldetailComponent implements OnInit {
 
     /**** School detail data  process ends here */
 
+    /**** School fee detail data  process ends here */
+    this.name = this._ActivatedRoute.snapshot.params.name;
+    this._SchoolService.getallschoolfee(this.name).subscribe((data: any) => {
+      this.schoolfeedetail = data;
+      console.log(this.schoolfeedetail);
+    });
+    /**** School fee detail data  process ends here */
+
+    /**** School facility detail data  process ends here */
+
+    /**** School facility detail data  process ends here */
+    this.name = this._ActivatedRoute.snapshot.params.name;
+    this._SchoolService.getallschoolfacility(this.name).subscribe((data) => {
+      this.schoolfacility = data;
+      console.log(this.schoolfacility);
+    });
+
     /***** The gallary section  */
+
+    //****  Get school gallery data*/
+    this.name = this._ActivatedRoute.snapshot.params.name;
+    this._SchoolService
+      .getallschoolGallery(this.name)
+      .subscribe((data: any) => {
+        this.galleryImages = data;
+        console.log(this.galleryImages);
+      });
+
     this.galleryOptions = [
       {
         width: "95%",
@@ -63,23 +109,16 @@ export class SchooldetailComponent implements OnInit {
       },
     ];
 
-    this.galleryImages = [
-      {
-        small: "https://preview.ibb.co/jrsA6R/img12.jpg",
-        medium: "https://preview.ibb.co/jrsA6R/img12.jpg",
-        big: "https://preview.ibb.co/jrsA6R/img12.jpg",
-      },
-      {
-        small: "https://preview.ibb.co/jrsA6R/img12.jpg",
-        medium: "https://preview.ibb.co/jrsA6R/img12.jpg",
-        big: "https://preview.ibb.co/jrsA6R/img12.jpg",
-      },
-      {
-        small: "https://preview.ibb.co/jrsA6R/img12.jpg",
-        medium: "https://preview.ibb.co/jrsA6R/img12.jpg",
-        big: "https://preview.ibb.co/jrsA6R/img12.jpg",
-      },
-    ];
-  }
-  /*** Gallary section ends here */
-}
+    /*** Gallary section ends here */
+    /*** code for the screen size variable section ends here */
+    this.medisub = this._MediaObserver.media$.subscribe(
+      (result: MediaChange) => {
+        this.deviceXs = result.mqAlias === "xs" ? true : false;
+        this.deviceSm = result.mqAlias === "sm" ? true : false;
+        this.deviceMd = result.mqAlias === "md" ? true : false;
+        this.deviceLg = result.mqAlias === "lg" ? true : false;
+        this.deviceXl = result.mqAlias === "xl" ? true : false;
+      }
+    );
+  } /* end of ng oninit */
+} /* end of component */

@@ -61,6 +61,7 @@ import { SchoolComponent } from "../../pages/school/school.component";
 import { SchooldetailComponent } from "../../pages/schooldetail/schooldetail.component";
 
 import { NgxGalleryModule } from "ngx-gallery-9";
+import { ProfileComponent } from "src/app/pages/profile/profile.component";
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { NgxGalleryModule } from "ngx-gallery-9";
     SchooldetailComponent,
     CoursedetailComponent,
     LessonComponent,
+    ProfileComponent,
   ],
   imports: [
     CommonModule,

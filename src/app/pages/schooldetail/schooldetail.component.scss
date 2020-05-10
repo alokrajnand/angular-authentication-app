@@ -1,69 +1,17 @@
-.header {
-  height: 100px;
-}
-
-.mat-toolbar-row {
-  background-color: #fff;
-  padding: 50px;
-  box-shadow: 1px 1px 2px 1px #888888 !important;
-}
-.header-row .material-icons {
-  font-size: 40px;
-  background-color: #f4f5fd;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px 1px #888888 !important;
-  padding: 10px;
-}
-
-.logo {
-  margin-top: 15px;
-  margin-left: 20px;
-}
-.heading {
-  font-size: 22px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-
-.subheading {
-  font-size: 15px;
-  margin-top: 0px;
-  padding-top: 0px;
-  text-decoration: none;
-  color: #878dbb;
-}
-
-.container {
-  margin: 15px;
-}
-
-.card-footer-link {
-  padding: 10px;
-}
-.share-card {
-  float: right;
-}
-
 /*****  *****/
-
 .school-container {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 15px;
   padding: 0px;
 }
-
 .school-banner {
   width: 100%;
   margin: 0px !important;
   padding: 0px !important;
   background-image: linear-gradient(-20deg, #2b5876, #4e4376) !important;
 }
-
 .school-card-container {
-  width: 45%;
-  margin: 0px !important;
-  padding: 0px !important;
+  width: 100%;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
@@ -76,15 +24,15 @@
   color: white;
 }
 .school-card-pi {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   margin-bottom: 20px;
   padding: 2px;
   border: 1px solid greenyellow;
 }
 
 .mat-card-sb-image {
-  width: 60%;
+  width: 70%;
   object-fit: cover !important;
   margin: 0px !important;
   padding: 0px !important;
@@ -99,9 +47,10 @@
 }
 
 .school-badge mat-card {
-  width: 20%;
+  width: 35% !important;
   background-image: linear-gradient(90deg, #141e30, #243b55) !important;
   color: white;
+  margin-bottom: 5px;
 }
 
 .school-main {
@@ -110,7 +59,7 @@
 }
 
 .school-main .school-main-content {
-  width: 76%;
+  width: 100%;
   padding: 0px;
 }
 
@@ -126,13 +75,13 @@
 .about-other-desc {
 }
 
-.test1 {
-  width: 45%;
-  padding: 20px;
+.gi-row-container {
+  margin-top: 15px;
+  width: 100%;
 }
 
 .gi-row {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .gi-row-info {
@@ -153,8 +102,38 @@
   width: 100%;
 }
 .facilities-card {
-  width: 20%;
-  margin-bottom: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  border-top: 2px solid greenyellow;
+}
+.facilities-card .material-icons {
+  background-color: burlywood;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.facilities-type {
+  font-weight: 700 !important;
+  font-size: 0.9875rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.facilities-y {
+  height: 20px;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: #1bc943;
+  margin: 10px;
+  border-radius: 5px;
+}
+.facilities-n {
+  height: 20px;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: red;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .gallery-container {
@@ -169,4 +148,15 @@
 
 .gallery-container {
   padding: 20px;
+}
+
+@media only screen and (min-width: 400px) {
+}
+@media only screen and (min-width: 700px) {
+}
+@media only screen and (min-width: 1000px) {
+}
+@media only screen and (min-width: 1400px) {
+}
+@media only screen and (min-width: 2100px) {
 }

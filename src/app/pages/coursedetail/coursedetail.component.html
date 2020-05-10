@@ -1,32 +1,26 @@
-
 <div class="banner">
-        <div class="banner-container" fxLayout="row" fxLayoutAlign="space-around none">
-            <div class="Post-header">
-                <div class="post-header-content">
-                <div class="">
-                <p class="post-header-category-name ">Angular</p>
-                </div>
-                <mat-card>
-                <h1 class="post-heading">Create a DAG to load data from one BigQuery table to another</h1>   
-                <p class="post-date">January 15th, 2020</p> 
-                <mat-card-header>
-                    
-                    <img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg">
-                    <mat-card-title>Amol Parekar</mat-card-title>
-                    <mat-card-subtitle>Tech Blogger and Writter</mat-card-subtitle>
-                </mat-card-header>
-                </mat-card>
-                </div>
-            </div>
-            <div class="post-banner-image">
-                <div class="post-banner-image-content">
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" height="300">
-                </div>
-            </div>
-    </div> 
+        <div class="banner-container">          
+            <div class="banner-box">
+                <mat-card class="banner-card">
+                    <mat-chip-list>
+                    <mat-chip color="primary" selected>Primary fish</mat-chip>
+                    </mat-chip-list>
+                <h1 class="course-heading">{{coursedetail.course_name}}</h1>   
+                <p class="course-date">January 15th, 2020</p> 
+                <mat-card-header>                   
+                    <img class ="course-banner-avatar" mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+                    <mat-card-title class="banner-course-author">alok</mat-card-title>
+                    <mat-card-subtitle class="banner-course-author-desc">Tech Blogger and Writter</mat-card-subtitle>
+                </mat-card-header>               
+              </mat-card>
+            </div> 
+            <div class="banner-box" *ngIf="deviceMd || deviceLg || deviceXl">
+                <img class="banner-box-img" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" height="280" >
+            </div>        
+        </div> 
 </div>
 
-<div class="course-detail-container" >
+<div class="course-container" >
     <mat-tab-group mat-stretch-tabs>
     <mat-tab label="Course Overview"> 
     <h1>Become a JavaScript expert with this in-depth guide to the new, essential tools and techniques every developer should know!</h1>
@@ -41,27 +35,24 @@ Whether you've just started dabbling with JavaScript or have been working with i
 </mat-tab>
     <mat-tab label="Syllabus">
 
-    <h1 class="course-review-heading"> detail course design </h1>
-    
+    <h1 class="course-review-heading"> detail course design </h1>   
                         <mat-accordion>
                             <mat-expansion-panel>
                                 <mat-expansion-panel-header>
-                                    <mat-panel-title> <mat-icon>home</mat-icon> Personal data</mat-panel-title>
-                                    <mat-panel-description>Type your name and age</mat-panel-description>
+                                    <mat-panel-title> Personal data Personal data</mat-panel-title>
                                 </mat-expansion-panel-header>
                                 <p>I'm visible because I am open</p>
                             </mat-expansion-panel>
                             <mat-expansion-panel >
                                 <mat-expansion-panel-header>
                                     <mat-panel-title>Self aware panel</mat-panel-title>
-                                    <mat-panel-description>Currently I am </mat-panel-description>
+                                    
                                 </mat-expansion-panel-header>
                                 <p>I'm visible because I am open</p>
                             </mat-expansion-panel>                   
                             <mat-expansion-panel >
                                 <mat-expansion-panel-header>
                                     <mat-panel-title>Self aware panel</mat-panel-title>
-                                    <mat-panel-description>Currently I am </mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p>I'm visible because I am open</p>
                             </mat-expansion-panel>                  
@@ -72,7 +63,7 @@ Whether you've just started dabbling with JavaScript or have been working with i
     <mat-tab label="Student Experiance">
     
     <h1 class="course-review-heading"> People Views about this course </h1>
-            <div class="course-review-container" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="course-review-container" fxLayout="row wrap" fxLayoutAlign="space-between center">
                     <div class="review-block"> 
                         <mat-card class="review-block-card">
                         <mat-card-title class="course-review-title">Course Review</mat-card-title>
@@ -174,24 +165,20 @@ Whether you've just started dabbling with JavaScript or have been working with i
     
                         <mat-accordion>
                             <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    
+                                <mat-expansion-panel-header>                                   
                                     <mat-panel-title>Personal data</mat-panel-title>
-                                    <mat-panel-description>Type your name and age</mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p>I'm visible because I am open</p>
                             </mat-expansion-panel>
                             <mat-expansion-panel >
                                 <mat-expansion-panel-header>
                                     <mat-panel-title>Self aware panel</mat-panel-title>
-                                    <mat-panel-description>Currently I am </mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p>I'm visible because I am open</p>
                             </mat-expansion-panel>                   
                             <mat-expansion-panel >
                                 <mat-expansion-panel-header>
                                     <mat-panel-title>Self aware panel</mat-panel-title>
-                                    <mat-panel-description>Currently I am </mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p>I'm visible because I am open</p>
                             </mat-expansion-panel>                  

@@ -11,7 +11,7 @@
 
     <mat-card class="auth-card">
 
-        <form class="example-form" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+        <form class="signin-form" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
             <mat-form-field class="example-full-width">
               <mat-label>User Name</mat-label>
               <input matInput placeholder="User Name" value="User name" formControlName="username" required>
@@ -27,21 +27,17 @@
               <mat-error>Please enter a password</mat-error>
             </mat-form-field>
         
-            <button mat-raised-button color="primary" style="width: 100%; display: block;">Submit</button>        
+            <button class="signin-button" mat-raised-button color="primary" style="width: 100%; display: block;">Submit</button>        
         </form>
 
 
 
-    <div class="margin-top-50"></div>
-    <div class="margin-top-50"></div>
     <mat-error>{{errorMsg}}</mat-error>
     <mat-divider></mat-divider>
     
     <div style="padding-top: 15px;"></div>
-    <p style="float: left">do not have account  : <a routerLinkActive="list-item-active" routerLink="/signup">Sign Up</a></p>
-    <p style="text-align: right">Forget Password : <a routerLinkActive="list-item-active" routerLink="/forgetpassword">Forget Password</a> </p>
-    
-    
+    <button class="signin-button" routerLink="/signup" mat-raised-button color="primary" style="width: 100%; display: block;">Don't have account - Sign Up</button> 
+    <button class="signin-button" routerLink="/forgetpassword" mat-raised-button color="primary" style="width: 100%; display: block;">Forget Password</button> 
     </mat-card>
     </div>
   </div>

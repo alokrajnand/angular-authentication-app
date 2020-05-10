@@ -16,6 +16,7 @@ import { SchooldetailComponent } from "./pages/schooldetail/schooldetail.compone
 import { SchoolComponent } from "./pages/school/school.component";
 import { CoursedetailComponent } from "./pages/coursedetail/coursedetail.component";
 import { LessonComponent } from "./pages/lesson/lesson.component";
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
       { path: "schools/:name", component: SchooldetailComponent },
       { path: "signup", component: SignupComponent },
       { path: "signin", component: SigninComponent },
+      { path: "profile", component: ProfileComponent },
     ],
   },
 

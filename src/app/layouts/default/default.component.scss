@@ -8,11 +8,6 @@ mat-drawer-container {
   height: 100%;
 }
 
-@media (max-width: 330px) {
-  mat-drawer {
-    width: 200px;
-  }
-}
 @media (min-width: 400px) {
   mat-drawer {
     width: 200px;
